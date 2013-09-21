@@ -1,0 +1,160 @@
+@charset "UTF-8";
+/* 引入公共的一些基本定义 */
+/* -----------------------------------------------------
+ * 共通的变量定义
+ * ----------------------------------------------------- */
+/* -----------------------------------------------------
+ * 开始定义一些公用功能的mixin(base级别用)
+ * ----------------------------------------------------- */
+/* -----------------------------------------------------
+ * 共通的基本样式定义
+ * ----------------------------------------------------- */
+/* line 23, ../../app/assets/stylesheets/_base.css.scss */
+.wb-clear-left {
+  clear: left;
+}
+
+/* line 27, ../../app/assets/stylesheets/_base.css.scss */
+.wb-clear-right {
+  clear: right;
+}
+
+/* line 31, ../../app/assets/stylesheets/_base.css.scss */
+.wb-clear-both {
+  clear: both;
+}
+
+/* -----------------------------------------------------
+ * 开始定义一些公用功能的mixin(组件级别用)
+ * ----------------------------------------------------- */
+/* 定义组件 Start */
+/* -----------------------------------------------------
+ * 自己定义翻页组件样式的部分(如果和bootstrap的
+ * pagination有冲突, 会覆盖bootstrap的)
+ * ----------------------------------------------------- */
+/* line 17, ../../app/assets/stylesheets/common.css.scss */
+.wb-pagination {
+  margin: 15px 0 5px 0;
+}
+
+/* -----------------------------------------------------
+ * 这里是一般一览画面的检索部分
+ * ----------------------------------------------------- */
+/* 条件部分外围容器  */
+/* line 25, ../../app/assets/stylesheets/common.css.scss */
+div.wb-search-condition-container {
+  float: none;
+  margin: 0;
+  padding: 14px 14px 10px;
+  border: solid 1px #0088cc;
+}
+/* line 31, ../../app/assets/stylesheets/common.css.scss */
+div.wb-search-condition-container form {
+  margin: 0px;
+}
+
+/* 检索部的条件部分(每一个查询条件一个div)  */
+/* line 37, ../../app/assets/stylesheets/common.css.scss */
+.wb-datagrid-filter-content {
+  padding-right: 20px;
+  float: left;
+}
+/* line 40, ../../app/assets/stylesheets/common.css.scss */
+.wb-datagrid-filter-content label {
+  display: inline;
+}
+
+/* 检索部的操作部分（也就是查询按钮等）  */
+/* line 45, ../../app/assets/stylesheets/common.css.scss */
+.wb-datagrid-filter-action {
+  float: right;
+}
+
+/* -----------------------------------------------------
+ * 这里是一般一览画面的结果部分
+ * ----------------------------------------------------- */
+/* 结果部分外围容器  */
+/* 这里开始是自定义了datagrid的表头排序显示部分 */
+/* line 74, ../../app/assets/stylesheets/common.css.scss */
+table.wb-datagrid thead {
+  background: -moz-linear-gradient(top, #f2f2f2, #e3e3e3);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#e3e3e3));
+}
+/* line 83, ../../app/assets/stylesheets/common.css.scss */
+table.wb-datagrid th span {
+  vertical-align: text-top;
+  float: left;
+}
+/* line 89, ../../app/assets/stylesheets/common.css.scss */
+table.wb-datagrid .order {
+  margin-left: 10px;
+  padding-top: 3px;
+  float: left;
+}
+/* line 94, ../../app/assets/stylesheets/common.css.scss */
+table.wb-datagrid .order .asc {
+  background-image: url("/assets/twitter/glyphicons-halflings.png");
+  background-position: -289px -96px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 14px;
+  line-height: 14px;
+  margin-top: 1px;
+  vertical-align: text-top;
+  width: 14px;
+  padding: 0;
+  margin: 0px;
+}
+/* line 99, ../../app/assets/stylesheets/common.css.scss */
+table.wb-datagrid .order .desc {
+  background-image: url("/assets/twitter/glyphicons-halflings.png");
+  background-position: -312px -96px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 14px;
+  line-height: 14px;
+  margin-top: 1px;
+  vertical-align: text-top;
+  width: 14px;
+  padding: 0;
+  margin: 0px;
+}
+
+/* 显示总件数 */
+/* line 107, ../../app/assets/stylesheets/common.css.scss */
+.wb-result-total {
+  float: right;
+  margin: 12px 5px;
+}
+
+/* -----------------------------------------------------
+ * 具体业务操作部分
+ * ----------------------------------------------------- */
+/* 总外围容器(包含下面两个sub-title和detail) */
+/* 具体业务操作部分内容的标题,动作头 */
+/* line 121, ../../app/assets/stylesheets/common.css.scss */
+.wb-content-sub-title {
+  padding: 5px 0;
+  border-color: pink;
+  border-style: solid;
+  border-width: 0 0 2px 0px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+/* line 129, ../../app/assets/stylesheets/common.css.scss */
+.wb-content-sub-title h3, .wb-content-sub-title h4 {
+  display: inline;
+}
+
+/* 具体内容详细部分 */
+/* line 135, ../../app/assets/stylesheets/common.css.scss */
+.wb-content-detail {
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+/* line 139, ../../app/assets/stylesheets/common.css.scss */
+.wb-content-detail tr td:first-child {
+  background-color: pink;
+  text-align: right;
+}
+

@@ -1,0 +1,63 @@
+/* line 2, ../../app/assets/stylesheets/wanerbu_formtastic.css.scss */
+.formtastic .input {
+  padding: 15px 0 10px 0;
+}
+/* line 6, ../../app/assets/stylesheets/wanerbu_formtastic.css.scss */
+.formtastic li.input {
+  border-color: #AAAAAA;
+  border-style: dotted;
+  border-width: 0 0 1px;
+}
+/* line 11, ../../app/assets/stylesheets/wanerbu_formtastic.css.scss */
+.formtastic li.input label {
+  color: black;
+  background-color: whitesmoke;
+  text-align: right;
+  padding-right: 15px;
+}
+/* line 21, ../../app/assets/stylesheets/wanerbu_formtastic.css.scss */
+.formtastic li.choice label {
+  text-align: left;
+}
+/* line 27, ../../app/assets/stylesheets/wanerbu_formtastic.css.scss */
+.formtastic .choices-group {
+  padding: 0;
+  width: 70%;
+}
+/* line 32, ../../app/assets/stylesheets/wanerbu_formtastic.css.scss */
+.formtastic legend {
+  border: solid #0088CC;
+  border-width: 0 0 1px 0;
+  margin-bottom: 10px;
+}
+/* line 37, ../../app/assets/stylesheets/wanerbu_formtastic.css.scss */
+.formtastic legend span {
+  border: solid #0088CC;
+  border-width: 0 0 0 5px;
+  padding-left: 8px;
+}
+
+/* line 47, ../../app/assets/stylesheets/wanerbu_formtastic.css.scss */
+legend {
+  font-size: 16px;
+}
+
+/* line 52, ../../app/assets/stylesheets/wanerbu_formtastic.css.scss */
+.formtastic .inline-errors {
+  display: inline;
+  margin: 0 0 0 5px;
+}
+
+/* line 58, ../../app/assets/stylesheets/wanerbu_formtastic.css.scss */
+abbr[title="required"] {
+  padding-left: 5px;
+  vertical-align: middle;
+  color: #CC0000;
+  font-size: 1.5em;
+}
+
+/* line 66, ../../app/assets/stylesheets/wanerbu_formtastic.css.scss */
+.formtastic .text textarea {
+  width: 45%;
+  height: 100px;
+}
