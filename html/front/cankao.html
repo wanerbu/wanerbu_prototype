@@ -1,0 +1,966 @@
+<!Doctype html>
+<html>
+<head><!-- SUCCESS_HEAD -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>羽毛球场地_游泳池_网球场_保龄球场_高尔夫球场馆预订 - 格瓦拉生活网</title>
+	<meta name="keywords" content="格瓦拉生活网提供羽毛球场地,游泳池,网球场,保龄球场,高尔夫球场等各类场地场馆预订及地址,线路,优惠信息查询."/>
+	<meta name="description" content="格瓦拉生活网提供羽毛球场地,游泳池,网球场,保龄球场,高尔夫球场等各类场地场馆预订及地址,线路,优惠信息查询."/>
+	<link rel="stylesheet" type="text/css" href="http://static5.gewara.com/css/gewara.css?n=ui_layout,wide_sport&v=2013091719"/>
+	<script type="text/javascript" src="http://static5.gewara.com/scripts/mootools.js"></script>
+	<script type="text/javascript" src="/scripts/gewara.js?n=gewara-util&v=2013091719"></script>
+	<style type="text/css">
+		.ui_layout{background:none;}
+		.ui_simulate{width:190px;}
+		.ui_simulate .simulate_options{width:188px;}
+		.ui_simulate .simulate_options li{width:182px;}
+	</style>
+</head>
+<body>
+<div id="top_notice" class="ui_notice" style="display:none;">
+	<div class="ui_notice_in">
+							</div>
+</div>
+
+<div class="ui_nav ui_sport_nav" >
+	<div class="ui_plugs_body">
+		<a href="/" class="logo" title="格瓦拉生活网"><img src="http://static5.gewara.com/css/images/blank.gif" alt="格瓦拉生活网" width="102" height="40"/></a>
+		<div id="cityChoose" class="ui_changeCity"></div>
+		<div class="ui_nav_menu" lang="bgcolor">
+							<ul class="ui_inline" lang="ishover">
+					<li class="isDisabled"><a href="/">首 页</a></li>
+					<li key="movie"><a  href="/movie/">电影</a></li>					<li key="drama"><a  href="/drama/">演出</a></li>					<li key="sport"><a class="select"  href="/sport/">运动</a>	</li>					
+					<li key="activity"><a  href="/activity/">活动</a></li>					<li key="home"><a  href="/home/sns/personIndex.xhtml">社区</a></li>
+				</ul>
+					</div>
+		<div class="ui_nav_right">
+			<div class="ui_t_search">
+				<form action="/newSearchKey.xhtml"  id="gForm">
+					<input type="hidden" value="" id="searchid"/>
+					<input type="text" name="skey" value="" class="search_text" alt="电影、演出、场馆、教练.." id="skey" autocomplete="off" x-webkit-speech="" accesskey="s"/><label class="search_button"><input class="search_button" type="submit" value="&nbsp;"/></label>
+				</form>
+			</div>
+			<div class="ui_logins right" id="global_check_login"></div>
+		</div>
+	</div>
+</div>
+<div class="ui_city_plugs none clear" id="ui_city_plugs"></div>
+<script type="text/javascript" src="http://static5.gewara.com/scripts/gewara.js?n=Autocompleter,scrollerbar,wide_navigation&v=2013091719" cityMap='$proMap' cookieCityname='上海' cookieCitycode='310000' head='header' issearch='' id='navigation'></script>
+<script type="text/javascript">
+window.addEvent('domready',function(){
+	nav.init();
+	gotoTop();
+	loadHeadCityList();
+});
+
+function loadHeadCityList(){
+	GewaraUtil.sendLoad("ui_city_plugs", "/ajax/common/loadHeadCity.xhtml",{}, function(result){
+	});
+}
+function gotoTop(){
+	var backToTopTxt = "返回顶部", backToTopEle = new Element("a", {
+		"class": "isGoUp",
+		title: backToTopTxt,
+		href:'javascript:void(0);'
+	}).addEvent("click", function() {
+		new Fx.Scroll($(window)).toTop();
+	}).inject(document.body), backToTopFun = function() {
+		var st = document.getScroll().y, winh = window.getSize().y;
+		if(st > 0){
+			if(backToTopEle.getSize().y != 50)backToTopEle.morph({
+				'opacity':[0,0.7],
+				'height':[0,50]
+			});
+		}else{
+			backToTopEle.morph({
+				'opacity':[0.7,0],
+				'height':[50,0]
+			});
+		}
+		if(!window.XMLHttpRequest){
+			backToTopEle.setStyle("top", st + winh - 166);
+		}
+	};
+	window.addEvents({
+		scroll: backToTopFun,
+		domready:backToTopFun,
+		resize:backToTopFun
+	});
+}
+var _gaq = _gaq || [];
+var _gaStartTime = GewaraUtil.rtime();
+var recordPage = '';
+window.addEvent("load", function(){
+	var timegap = GewaraUtil.rtime() - _gaStartTime;
+	var pageTag = '';
+	var curPage = document.location.href;
+	if(pageTag == '') {
+		if(curPage.indexOf("/movie/") > 0) pageTag = "/movie/all";
+		else if(curPage.indexOf("/cinema/") > 0) pageTag = "/cinema/all";
+		else if(curPage.indexOf("/sport/") > 0) pageTag = "/sport/all";
+		else if(curPage.indexOf("/ktv/") > 0) pageTag = "/ktv/all";
+		else if(curPage.indexOf("/gym/") > 0) pageTag = "/gym/all";
+		else if(curPage.indexOf("/bar/") > 0) pageTag = "/bar/all";
+		else if(curPage.indexOf("/drama/") > 0) pageTag = "/drama/all";
+		else if(curPage.indexOf("/blog") > 0) pageTag = "/blog/all";
+		else if(curPage.indexOf("/activity/") > 0) pageTag = "/activity/all";
+		else if(curPage.indexOf("/wala/") > 0) pageTag = "/wala/all";
+		else if(curPage.indexOf("/qa/") > 0) pageTag = "/qa/all";
+		else if(curPage.indexOf("/quan/") > 0) pageTag = "/quan/all";
+		else if(curPage.indexOf("/theartr/") > 0) pageTag = "/theatre/all";
+		else if(curPage.indexOf("/news/") > 0) pageTag = "/news/all";
+		else pageTag = "/other";
+	}
+	if(timegap < 0 || timegap > 30000 || recordPage.length>0) GewaraUtil.sendRequest("/logRendError.xhtml", {"timegap":timegap, 'pageTag':pageTag, "page": curPage}, function(result){});
+});
+</script><form id="searchForm" action="/sport/sportList.xhtml">
+		<input type="hidden" name="sportname" id="sportname" value=""/>
+	<input type="hidden" name="countycode" id="countycode" value=""/>
+	<input type="hidden" name="indexareacode" id="indexareacode" value=""/>
+	<input type="hidden" name="servicetype" id="servicetype" value="288731"/>
+	<input type="hidden" name="lineid" id="lineid" value=""/>
+	<input type="hidden" name="order" id="order" value=""/>
+	<input type="hidden" name="coupon" id="coupon" value=""/>
+	<input type="hidden" name="park" id="park" value=""/>
+	<input type="hidden" name="booking" id="booking" value=""/>
+	<input type="hidden" name="visacard" id="visacard" value="" />
+	<input type="hidden" name="cupboard" id="cupboard" value="" />
+	<input type="hidden" name="bathe" id="bathe" value="" />
+	<input type="hidden" name="indoor" id="indoor" value="" />
+	<input type="hidden" name="outdoor" id="outdoor" value="" />
+	<input type="hidden" name="meal" id="meal" value="" />
+	<input type="hidden" name="sale" id="sale" value="" />
+	<input type="hidden" name="train" id="train" value="" />
+	<input type="hidden" name="maintain" id="maintain" value="" />
+	<input type="hidden" name="lease" id="lease" value="" />
+	<input type="hidden" name="restregion" id="restregion" value="" />
+	<input type="hidden" name="membercard" id="membercard" value="" />
+	<input type="hidden" name="sportids" id="sportids" value="" />
+</form>
+<div class="ui_layout bgtrans">
+	<div class="index_wrap clear">
+		<div class="index_left">
+	<div id="ui_left" class="leftNavBox">
+		<ul class="ui_aside_nav clear">
+			<li ><a href="/sport/">运动首页</a></li>
+			<li class="select"><a href="/sport/sportList.xhtml">运动馆<span>966家</span></a></li>
+			<li ><a href="/sport/itemList.xhtml">运动项目<span>26个</span></a></li>
+			<li><a href="/gym/searchGym.xhtml" target="_blank">健身馆<span>765家</span></a></li>			<li><a href="/gym/courseList.xhtml" target="_blank">健身项目<span>57个</span></a></li>			<li ><a href="/sport/curriculumList.xhtml">培训课程<span>0个</span></a></li>
+			<li ><a href="/news/sport">运动资讯</a></li>
+			<li><a href="/blog/sport" target="_blank">运动论坛</a></li>
+		</ul>
+		<a href="/mobile/mobileSport.xhtml" target="_blank" title="点击或扫描下载" class="app2wm">
+			<img class="app2wm_tips" src="/css/sport_wide/app3wms.gif" width="120" height="120" alt="二维码下载">
+			<p class="mt10">扫描二维码下载</p>
+			<p>格瓦拉@运动App</p>
+		</a>
+	</div>
+</div>
+		<div class="index_right">
+			<div class="mt10">
+				<div class="ui_left">
+					<div class="mod_kong">
+						<div class="mod_hd">
+							<h2>运动馆</h2>
+						</div>
+						<div class="mod_bd">
+							<ul class="ulist">
+								<li>
+									<div class="condition">
+										<dl class="clear dlTy">
+											<dt>
+												<span class="typeTitle mr10">选择项目 </span>
+											</dt>
+											<dd>
+																						<a  href="javascript:searchPPPV('servicetype','288732');">羽毛球</a>
+																						<a  href="javascript:searchPPPV('servicetype','288699');">游泳</a>
+																						<a  class="selected"  href="javascript:searchPPPV('servicetype','288731');">网球</a>
+																						<a  href="javascript:searchPPPV('servicetype','288721');">篮球（场地）</a>
+																						<a  href="javascript:searchPPPV('servicetype','91275434');">篮球（人次）</a>
+																						<a  href="javascript:searchPPPV('servicetype','288733');">乒乓球</a>
+																						<a  href="javascript:searchPPPV('servicetype','288722');">足球</a>
+																						<a  href="javascript:searchPPPV('servicetype','6582889');">壁球</a>
+																						<a  href="javascript:searchPPPV('servicetype','288730');">斯诺克</a>
+																						<a  href="javascript:searchPPPV('servicetype','91816046');">美式台球</a>
+																						<a  href="javascript:searchPPPV('servicetype','111006658');">射箭</a>
+																						<a  href="javascript:searchPPPV('servicetype','288734');">保龄球</a>
+																						<a  href="javascript:searchPPPV('servicetype','301954');">高尔夫球</a>
+																						<a  href="javascript:searchPPPV('servicetype','288704');">射击</a>
+																						<a  href="javascript:searchPPPV('servicetype','303811');">溜冰</a>
+																						<a  href="javascript:searchPPPV('servicetype','311713');">赛车</a>
+																						<a  href="javascript:searchPPPV('servicetype','296083');">攀岩</a>
+																						<a  href="javascript:searchPPPV('servicetype','288690');">轮滑</a>
+																						<a  href="javascript:searchPPPV('servicetype','288691');">滑板</a>
+																						<a  href="javascript:searchPPPV('servicetype','288692');">自行车</a>
+																						<a  href="javascript:searchPPPV('servicetype','312511');">滑雪</a>
+																						<a  href="javascript:searchPPPV('servicetype','288711');">卡丁车</a>
+																						<a  href="javascript:searchPPPV('servicetype','3993698');">马术</a>
+																						<a  href="javascript:searchPPPV('servicetype','288723');">排球</a>
+																						<a  href="javascript:searchPPPV('servicetype','133785894');">桌球</a>
+																						<a  href="javascript:searchPPPV('servicetype','288708');">其它运动</a>
+																						</dd>
+										</dl>
+									</div>
+								</li>
+								<li>
+									<div class="condition">
+										<dl class="clear dlTy">
+											<dt>
+												<span class="typeTitle mr10">行政区域 </span>
+											</dt>
+											<dd>
+											<input type="hidden" name="tempids" id="tempids" />
+											<a id="myBuyTicketSport"  class="none"  href="javascript:setSportids();">我常去的 </a>
+																						<a  href="javascript:searchPPPV('countycode','310115');">浦东</a>
+																						<a  href="javascript:searchPPPV('countycode','310112');">闵行</a>
+																						<a  href="javascript:searchPPPV('countycode','310104');">徐汇</a>
+																						<a  href="javascript:searchPPPV('countycode','310105');">长宁</a>
+																						<a  href="javascript:searchPPPV('countycode','310107');">普陀</a>
+																						<a  href="javascript:searchPPPV('countycode','310101');">黄浦</a>
+																						<a  href="javascript:searchPPPV('countycode','310110');">杨浦</a>
+																						<a  href="javascript:searchPPPV('countycode','310109');">虹口</a>
+																						<a  href="javascript:searchPPPV('countycode','310113');">宝山</a>
+																						<a  href="javascript:searchPPPV('countycode','310108');">闸北</a>
+																						<a  href="javascript:searchPPPV('countycode','310106');">静安</a>
+																						<a  href="javascript:searchPPPV('countycode','310117');">松江</a>
+																						<a  href="javascript:searchPPPV('countycode','310118');">青浦</a>
+																						<a  href="javascript:searchPPPV('countycode','310114');">嘉定</a>
+																						<a  href="javascript:searchPPPV('countycode','310116');">金山</a>
+																						<a  href="javascript:searchPPPV('countycode','310120');">奉贤</a>
+																						<a  href="javascript:searchPPPV('countycode','310230');">崇明</a>
+																						</dd>
+										</dl>
+									</div>
+								</li>
+																								<li>
+									<div class="condition">
+										<dl class="clear dlTy">
+											<dt>
+												<span class="typeTitle mr10">地铁沿线</span>
+											</dt>
+											<dd>
+																								<a  class="trg"  href="javascript:searchPPPV('lineid','147560');">1号线</a>
+																								<a  class="trg"  href="javascript:searchPPPV('lineid','164736');">2号线</a>
+																								<a  class="trg"  href="javascript:searchPPPV('lineid','170190');">3号线</a>
+																								<a  class="trg"  href="javascript:searchPPPV('lineid','170220');">4号线</a>
+																								<a  class="trg"  href="javascript:searchPPPV('lineid','378279');">5号线</a>
+																								<a  class="trg"  href="javascript:searchPPPV('lineid','240808');">6号线</a>
+																								<a  class="trg"  href="javascript:searchPPPV('lineid','240837');">7号线</a>
+																								<a  class="trg"  href="javascript:searchPPPV('lineid','170247');">8号线</a>
+																								<a  class="trg"  href="javascript:searchPPPV('lineid','170268');">9号线</a>
+																								<a  class="trg"  href="javascript:searchPPPV('lineid','7642212');">10号线</a>
+																								<a  class="trg"  href="javascript:searchPPPV('lineid','7702786');">11号线</a>
+																							</dd>
+										</dl>
+									</div>
+								</li>
+																<li>
+									<div class="condition">
+										<dl class="clear dlTy">
+											<dt>
+												<span class="typeTitle mr10">特色筛选 </span>
+											</dt>
+											<dd class="conditionIco">
+												<a href="javascript:searchPPPV2('park','park');"  class="O1" ><em class="S3 sp_tcc"></em>停车场</a>
+												<a href="javascript:searchPPPV2('visacard','visacard');"  class="O1" ><em class="S3 sp_skjs"></em>刷卡结算</a>
+												<a href="javascript:searchPPPV2('lease','lease');"  class="O1" ><em class="S3 sp_qczj"></em>器材租借 </a>
+												<a href="javascript:searchPPPV2('membercard','membercard');"  class="O1" ><em class="S3 sp_hyyd"></em>支持会员卡预定</a>
+											</dd>
+										</dl>
+									</div>
+								</li>
+								<li>
+									<div class="condition mt10">
+										<dl class="clear dlTy">
+											<dt>
+												<span class="typeTitle left">名称查询</span>
+											</dt>
+											<dd>
+												<div class="search_kuang left">
+													<form action="javascript:searchname('sportname',$('sportname2').value)">
+														<input id="sportname2" value="" class="search_text searchText noradius" type="text"  alt="请输入搜索关键词" name="sportname2">
+														<label class="search_button noradius">
+															<input type="button" value="" onclick="searchname('sportname',$('sportname2').value)"/>
+														</label>
+													</form>
+												</div>						
+											</dd>
+										</dl>
+									</div>
+								</li>
+							</ul>
+							<div class="mod_tabs mod_tabs_sport">
+								<div class="mod_hd">
+									<ul class="nav_tabs" id="nav_tabsDiv">
+										<li  class="select"  id="dramaInfoBoxTab"><a href="javascript:searchPPPV('booking', '');">全　部</a></li>
+										<li  id="theatraIntruduceTab"><a href="javascript:searchPPPV('booking', 'open');">可预订</a></li>
+									</ul>
+								</div>
+								<div class="mod_bd clear wiP">
+									<div class="selectedMenus clear">
+										<div class="right">
+											<div class="ui_simulate">
+												<div class="simulate_select">
+													<div class="select_value">默认(优先展示可预订场馆)</div>
+													<a class="select_arrow" href="javascript:void(0);"></a>
+													<input class="simulate_value" type="hidden" value="" name="order">
+												</div>
+												<ul class="simulate_options">
+													<li><a href="javascript:void(0);" data-value="">默认(优先展示可预订场馆)</a></li>
+													<li><a href="javascript:void(0);" data-value="generalmark">按评分(由高到低)</a></li>
+													<li><a href="javascript:void(0);" data-value="clickedtimes">按关注(由高到低)</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="left tiaojian_p">
+																						<span class="">已选条件：</span>
+																																	<span class="selections">
+												<em>网球</em>
+												<a class="ui_x bg6_hover" onclick="searchRemoveKey('servicetype','网球')">×</a>
+											</span>
+																																																																																																																									<span>
+												共<b class="cSport sNum">147</b>家场馆
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sportList" id="cinemaListArea">
+												<ul>
+							<li class="effectLi sportList" style="width:100%; position:static;">
+								<div class="ui_media">
+									<div class="ui_pic cinema">
+										<a href="/sport/1276900" target="_blank" title="田林体育俱乐部">
+											<img src="http://img.gewara.cn/css/images/blank.gif" alt="田林体育俱乐部" height="90" width="120" style="border:1px solid #f4f4f4; background:url(http://img5.gewara.com/sw120h90/images/sport/201210/s_750ca8ab_13a68f7c4f1__7da4.jpg) center center no-repeat #fff; display:block; padding:1px; vertical-align:middle;"/>
+																					</a>
+										<p class="mt10">
+											<a class="button redBt bigBt" href="/sport/1276900" target="_blank"><span>在线预订</span></a>										</p>
+									</div>
+									<div class="ui_text">
+										<div class="title">
+											<h2>
+												<a href="/sport/1276900" title="田林体育俱乐部" target="_blank" class="color3">田林体育俱乐部</a>
+											</h2>
+											<span class="ml5">(16219关注)</span>
+											<span class="grade">
+												<sub style="margin:0;">7</sub>
+												<sup>.5</sup>
+											</span>
+										</div>
+																				<p class="mt10">
+											详细地址：<a href="/sport/sportList.xhtml?countycode=310104" target="_blank">徐汇区</a>钦州路728号(近田林东路)
+											<span class="ffst">[</span><a class="cSport" target="_blank" href="/common/baiduMap.xhtml?id=1276900&tag=sport">地图</a><span class="ffst">]</span>
+										</p>
+																				<p>联系电话：021-54489574          021-54974676</p>										<p>经营项目：网球 乒乓球 斯诺克 游泳 保龄球 美式台球 </p>										<div class="favorable mt10">
+																																	<p><span class="cSport">77 </span>片网球场次空余</p>
+																																											</div>
+										<div class="mt5 conditionIco">
+																																																																	</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+												<ul>
+							<li class="effectLi sportList" style="width:100%; position:static;">
+								<div class="ui_media">
+									<div class="ui_pic cinema">
+										<a href="/sport/53603247" target="_blank" title="虹桥临空网球场">
+											<img src="http://img.gewara.cn/css/images/blank.gif" alt="虹桥临空网球场" height="90" width="120" style="border:1px solid #f4f4f4; background:url(http://img6.gewara.com/sw120h90/images/sport/201201/s_48650dde_134b1342399__7ff4.jpg) center center no-repeat #fff; display:block; padding:1px; vertical-align:middle;"/>
+																					</a>
+										<p class="mt10">
+																					</p>
+									</div>
+									<div class="ui_text">
+										<div class="title">
+											<h2>
+												<a href="/sport/53603247" title="虹桥临空网球场" target="_blank" class="color3">虹桥临空网球场</a>
+											</h2>
+											<span class="ml5">(9582关注)</span>
+											<span class="grade">
+												<sub style="margin:0;">8</sub>
+												<sup>.7</sup>
+											</span>
+										</div>
+																				<p class="mt10">
+											详细地址：<a href="/sport/sportList.xhtml?countycode=310105" target="_blank">长宁区</a>金钟路631号7楼
+											<span class="ffst">[</span><a class="cSport" target="_blank" href="/common/baiduMap.xhtml?id=53603247&tag=sport">地图</a><span class="ffst">]</span>
+										</p>
+																				<p>联系电话：021-32563853</p>										<p>经营项目：网球 </p>										<div class="favorable mt10">
+																																</div>
+										<div class="mt5 conditionIco">
+																																	<span class="O1"><em class="S3 sp_tcc"></em>停车场</span>
+																																																						</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+												<ul>
+							<li class="effectLi sportList" style="width:100%; position:static;">
+								<div class="ui_media">
+									<div class="ui_pic cinema">
+										<a href="/sport/68360703" target="_blank" title="快网网球俱乐部(江湾球场) ">
+											<img src="http://img.gewara.cn/css/images/blank.gif" alt="快网网球俱乐部(江湾球场) " height="90" width="120" style="border:1px solid #f4f4f4; background:url(http://img6.gewara.com/sw120h90/images/sport/201210/s50237d7b_13a0ad81e00__6ea3.jpg) center center no-repeat #fff; display:block; padding:1px; vertical-align:middle;"/>
+																					</a>
+										<p class="mt10">
+											<a class="button redBt bigBt" href="/sport/68360703" target="_blank"><span>在线预订</span></a>										</p>
+									</div>
+									<div class="ui_text">
+										<div class="title">
+											<h2>
+												<a href="/sport/68360703" title="快网网球俱乐部(江湾球场) " target="_blank" class="color3">快网网球俱乐部(江湾球场) </a>
+											</h2>
+											<span class="ml5">(6088关注)</span>
+											<span class="grade">
+												<sub style="margin:0;">6</sub>
+												<sup>.0</sup>
+											</span>
+										</div>
+																				<p class="mt10">
+											详细地址：<a href="/sport/sportList.xhtml?countycode=310110" target="_blank">杨浦区</a>国和路346号，江湾体育中心网球场(近政立路)
+											<span class="ffst">[</span><a class="cSport" target="_blank" href="/common/baiduMap.xhtml?id=68360703&tag=sport">地图</a><span class="ffst">]</span>
+										</p>
+																				<p>联系电话：400-021-0059 13601946678</p>										<p>经营项目：网球 </p>										<div class="favorable mt10">
+																																	<p><span class="cSport">36 </span>片网球场次空余</p>
+																																											</div>
+										<div class="mt5 conditionIco">
+																																	<span class="O1"><em class="S3 sp_tcc"></em>停车场</span>
+																																																						</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+												<ul>
+							<li class="effectLi sportList" style="width:100%; position:static;">
+								<div class="ui_media">
+									<div class="ui_pic cinema">
+										<a href="/sport/79012841" target="_blank" title="上海乾元网球馆">
+											<img src="http://img.gewara.cn/css/images/blank.gif" alt="上海乾元网球馆" height="90" width="120" style="border:1px solid #f4f4f4; background:url(http://img6.gewara.com/sw120h90/images/sport/201210/s_3f83d1c7_13a4f855151__7e36.jpg) center center no-repeat #fff; display:block; padding:1px; vertical-align:middle;"/>
+																					</a>
+										<p class="mt10">
+											<a class="button redBt bigBt" href="/sport/79012841" target="_blank"><span>在线预订</span></a>										</p>
+									</div>
+									<div class="ui_text">
+										<div class="title">
+											<h2>
+												<a href="/sport/79012841" title="上海乾元网球馆" target="_blank" class="color3">上海乾元网球馆</a>
+											</h2>
+											<span class="ml5">(4371关注)</span>
+											<span class="grade">
+												<sub style="margin:0;">8</sub>
+												<sup>.5</sup>
+											</span>
+										</div>
+																				<p class="mt10">
+											详细地址：<a href="/sport/sportList.xhtml?countycode=310104" target="_blank">徐汇区</a>龙腾大道2599号
+											<span class="ffst">[</span><a class="cSport" target="_blank" href="/common/baiduMap.xhtml?id=79012841&tag=sport">地图</a><span class="ffst">]</span>
+										</p>
+																				<p>联系电话：021-64576676</p>										<p>经营项目：网球 </p>										<div class="favorable mt10">
+																																	<p><span class="cSport">348 </span>片网球场次空余</p>
+																																											</div>
+										<div class="mt5 conditionIco">
+																																	<span class="O1"><em class="S3 sp_tcc"></em>停车场</span>
+																																																						</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+												<ul>
+							<li class="effectLi sportList" style="width:100%; position:static;">
+								<div class="ui_media">
+									<div class="ui_pic cinema">
+										<a href="/sport/68350311" target="_blank" title="快网网球俱乐部(国会球场)">
+											<img src="http://img.gewara.cn/css/images/blank.gif" alt="快网网球俱乐部(国会球场)" height="90" width="120" style="border:1px solid #f4f4f4; background:url(http://img5.gewara.com/sw120h90/images/sport/201210/s_2c446468_13a0ad988e4__6ed7.jpg) center center no-repeat #fff; display:block; padding:1px; vertical-align:middle;"/>
+																					</a>
+										<p class="mt10">
+											<a class="button redBt bigBt" href="/sport/68350311" target="_blank"><span>在线预订</span></a>										</p>
+									</div>
+									<div class="ui_text">
+										<div class="title">
+											<h2>
+												<a href="/sport/68350311" title="快网网球俱乐部(国会球场)" target="_blank" class="color3">快网网球俱乐部(国会球场)</a>
+											</h2>
+											<span class="ml5">(3840关注)</span>
+											<span class="grade">
+												<sub style="margin:0;">8</sub>
+												<sup>.2</sup>
+											</span>
+										</div>
+																				<p class="mt10">
+											详细地址：<a href="/sport/sportList.xhtml?countycode=310115" target="_blank">浦东新区</a>滨江大道2727号，上海国会会议中心网球场(近丰和路)
+											<span class="ffst">[</span><a class="cSport" target="_blank" href="/common/baiduMap.xhtml?id=68350311&tag=sport">地图</a><span class="ffst">]</span>
+										</p>
+																				<p>联系电话：400-021-0059 13636390039 </p>										<p>经营项目：网球 </p>										<div class="favorable mt10">
+																																	<p><span class="cSport">18 </span>片网球场次空余</p>
+																																											</div>
+										<div class="mt5 conditionIco">
+																																	<span class="O1"><em class="S3 sp_tcc"></em>停车场</span>
+																																																						</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+												<ul>
+							<li class="effectLi sportList" style="width:100%; position:static;">
+								<div class="ui_media">
+									<div class="ui_pic cinema">
+										<a href="/sport/91135913" target="_blank" title="新中苑-生活大师会所">
+											<img src="http://img.gewara.cn/css/images/blank.gif" alt="新中苑-生活大师会所" height="90" width="120" style="border:1px solid #f4f4f4; background:url(http://img5.gewara.com/sw120h90/images/sport/201212/s_5a7fd9d9_13ba780c30f__7ff1.jpg) center center no-repeat #fff; display:block; padding:1px; vertical-align:middle;"/>
+											<span class="mark"></span>										</a>
+										<p class="mt10">
+											<a class="button redBt bigBt" href="/sport/91135913" target="_blank"><span>在线预订</span></a>										</p>
+									</div>
+									<div class="ui_text">
+										<div class="title">
+											<h2>
+												<a href="/sport/91135913" title="新中苑-生活大师会所" target="_blank" class="color3">新中苑-生活大师会所</a>
+											</h2>
+											<span class="ml5">(3550关注)</span>
+											<span class="grade">
+												<sub style="margin:0;">7</sub>
+												<sup>.0</sup>
+											</span>
+										</div>
+																				<p class="mt10">
+											详细地址：<a href="/sport/sportList.xhtml?countycode=310101" target="_blank">黄浦区</a>西藏南路1433弄新中苑小区5号楼3层(近瞿溪路)
+											<span class="ffst">[</span><a class="cSport" target="_blank" href="/common/baiduMap.xhtml?id=91135913&tag=sport">地图</a><span class="ffst">]</span>
+										</p>
+																				<p>联系电话：13795373484 13901626963</p>										<p>经营项目：网球 乒乓球 斯诺克 </p>										<div class="favorable mt10">
+																																	<p><span class="cSport">98 </span>片网球场次空余</p>
+																																											</div>
+										<div class="mt5 conditionIco">
+																																	<span class="O1"><em class="S3 sp_tcc"></em>停车场</span>
+																																																						</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+												<ul>
+							<li class="effectLi sportList" style="width:100%; position:static;">
+								<div class="ui_media">
+									<div class="ui_pic cinema">
+										<a href="/sport/130264665" target="_blank" title="华凯华美达广场酒店苏创体育俱乐部">
+											<img src="http://img.gewara.cn/css/images/blank.gif" alt="华凯华美达广场酒店苏创体育俱乐部" height="90" width="120" style="border:1px solid #f4f4f4; background:url(http://img5.gewara.com/sw120h90/images/sport/201308/s6e046982_14070f3cffd__7e85.jpg) center center no-repeat #fff; display:block; padding:1px; vertical-align:middle;"/>
+																					</a>
+										<p class="mt10">
+											<a class="button redBt bigBt" href="/sport/130264665" target="_blank"><span>在线预订</span></a>										</p>
+									</div>
+									<div class="ui_text">
+										<div class="title">
+											<h2>
+												<a href="/sport/130264665" title="华凯华美达广场酒店苏创体育俱乐部" target="_blank" class="color3">华凯华美达广场酒店苏创体育俱乐部</a>
+											</h2>
+											<span class="ml5">(381关注)</span>
+											<span class="grade">
+												<sub style="margin:0;">8</sub>
+												<sup>.5</sup>
+											</span>
+										</div>
+																				<p class="mt10">
+											详细地址：<a href="/sport/sportList.xhtml?countycode=310120" target="_blank">奉贤区</a>环华路9号（化学工业区）
+											<span class="ffst">[</span><a class="cSport" target="_blank" href="/common/baiduMap.xhtml?id=130264665&tag=sport">地图</a><span class="ffst">]</span>
+										</p>
+																				<p>联系电话：021-67120550转50019</p>										<p>经营项目：游泳 篮球（场地） 乒乓球 网球 羽毛球 足球 </p>										<div class="favorable mt10">
+																																	<p><span class="cSport">288 </span>片网球场次空余</p>
+																																											</div>
+										<div class="mt5 conditionIco">
+																																	<span class="O1"><em class="S3 sp_tcc"></em>停车场</span>
+																																																						</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+												<ul>
+							<li class="effectLi sportList" style="width:100%; position:static;">
+								<div class="ui_media">
+									<div class="ui_pic cinema">
+										<a href="/sport/295051" target="_blank" title="浦东游泳馆（浦东南路馆）">
+											<img src="http://img.gewara.cn/css/images/blank.gif" alt="浦东游泳馆（浦东南路馆）" height="90" width="120" style="border:1px solid #f4f4f4; background:url(http://img5.gewara.com/sw120h90/images/sport/201210/s_3f83d1c7_13a4f855151__7e2e.jpg) center center no-repeat #fff; display:block; padding:1px; vertical-align:middle;"/>
+																					</a>
+										<p class="mt10">
+																					</p>
+									</div>
+									<div class="ui_text">
+										<div class="title">
+											<h2>
+												<a href="/sport/295051" title="浦东游泳馆（浦东南路馆）" target="_blank" class="color3">浦东游泳馆（浦东南路馆）</a>
+											</h2>
+											<span class="ml5">(43988关注)</span>
+											<span class="grade">
+												<sub style="margin:0;">8</sub>
+												<sup>.5</sup>
+											</span>
+										</div>
+																				<p class="mt10">
+											详细地址：<a href="/sport/sportList.xhtml?countycode=310115" target="_blank">浦东新区</a>浦东南路3669号(近东方路)
+											<span class="ffst">[</span><a class="cSport" target="_blank" href="/common/baiduMap.xhtml?id=295051&tag=sport">地图</a><span class="ffst">]</span>
+										</p>
+																				<p>联系电话：021-58890101 58898936 58897805</p>										<p>经营项目：游泳 篮球（场地） 乒乓球 网球 羽毛球 斯诺克 </p>										<div class="favorable mt10">
+																																</div>
+										<div class="mt5 conditionIco">
+																																	<span class="O1"><em class="S3 sp_tcc"></em>停车场</span>
+																																																						</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+												<ul>
+							<li class="effectLi sportList" style="width:100%; position:static;">
+								<div class="ui_media">
+									<div class="ui_pic cinema">
+										<a href="/sport/295055" target="_blank" title="上海体育馆羽毛球馆">
+											<img src="http://img.gewara.cn/css/images/blank.gif" alt="上海体育馆羽毛球馆" height="90" width="120" style="border:1px solid #f4f4f4; background:url(http://img5.gewara.com/sw120h90/images/sport/201210/s_3f83d1c7_13a4f855151__7e25.jpg) center center no-repeat #fff; display:block; padding:1px; vertical-align:middle;"/>
+																					</a>
+										<p class="mt10">
+																					</p>
+									</div>
+									<div class="ui_text">
+										<div class="title">
+											<h2>
+												<a href="/sport/295055" title="上海体育馆羽毛球馆" target="_blank" class="color3">上海体育馆羽毛球馆</a>
+											</h2>
+											<span class="ml5">(29878关注)</span>
+											<span class="grade">
+												<sub style="margin:0;">6</sub>
+												<sup>.0</sup>
+											</span>
+										</div>
+																				<p class="mt10">
+											详细地址：<a href="/sport/sportList.xhtml?countycode=310104" target="_blank">徐汇区</a>漕溪北路1111号
+											<span class="ffst">[</span><a class="cSport" target="_blank" href="/common/baiduMap.xhtml?id=295055&tag=sport">地图</a><span class="ffst">]</span>
+										</p>
+																				<p>联系电话：021-64382372 64814303 64385200</p>										<p>经营项目：羽毛球 网球 乒乓球 </p>										<div class="favorable mt10">
+																																</div>
+										<div class="mt5 conditionIco">
+																																	<span class="O1"><em class="S3 sp_tcc"></em>停车场</span>
+																																																						</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+												<ul>
+							<li class="effectLi sportList" style="width:100%; position:static;">
+								<div class="ui_media">
+									<div class="ui_pic cinema">
+										<a href="/sport/293423" target="_blank" title="源深体育发展中心">
+											<img src="http://img.gewara.cn/css/images/blank.gif" alt="源深体育发展中心" height="90" width="120" style="border:1px solid #f4f4f4; background:url(http://img5.gewara.com/sw120h90/images/sport/201210/s6142954e_13a4f918513__7e37.jpg) center center no-repeat #fff; display:block; padding:1px; vertical-align:middle;"/>
+																					</a>
+										<p class="mt10">
+																					</p>
+									</div>
+									<div class="ui_text">
+										<div class="title">
+											<h2>
+												<a href="/sport/293423" title="源深体育发展中心" target="_blank" class="color3">源深体育发展中心</a>
+											</h2>
+											<span class="ml5">(26364关注)</span>
+											<span class="grade">
+												<sub style="margin:0;">7</sub>
+												<sup>.7</sup>
+											</span>
+										</div>
+																				<p class="mt10">
+											详细地址：<a href="/sport/sportList.xhtml?countycode=310115" target="_blank">浦东新区</a>源深路655号
+											<span class="ffst">[</span><a class="cSport" target="_blank" href="/common/baiduMap.xhtml?id=293423&tag=sport">地图</a><span class="ffst">]</span>
+										</p>
+																				<p>联系电话：021-58601290 5860610 58215850(网球预订)</p>										<p>经营项目：羽毛球 乒乓球 网球 篮球（场地） 足球 保龄球 </p>										<div class="favorable mt10">
+																																</div>
+										<div class="mt5 conditionIco">
+																																	<span class="O1"><em class="S3 sp_tcc"></em>停车场</span>
+																																																						</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+												<div class="page">				<div id='page'>
+															<a href="/sport/sportList.xhtml?servicetype=288731"  class='on' ><span>1</span></a>
+											<a href="/sport/sportList.xhtml?pageNo=1&servicetype=288731" ><span>2</span></a>
+											<a href="/sport/sportList.xhtml?pageNo=2&servicetype=288731" ><span>3</span></a>
+											<a href="/sport/sportList.xhtml?pageNo=3&servicetype=288731" ><span>4</span></a>
+											<a href="/sport/sportList.xhtml?pageNo=4&servicetype=288731" ><span>5</span></a>
+											<a href="/sport/sportList.xhtml?pageNo=5&servicetype=288731" ><span>6</span></a>
+							<strong>...</strong>
+												<a href="/sport/sportList.xhtml?pageNo=14&servicetype=288731" ><span>15</span></a>
+													<a href="/sport/sportList.xhtml?pageNo=1&servicetype=288731" class='next'><span>下一页</span></a>
+				</div>
+		</div>
+					</div>
+				</div>
+				<div class="ui_right">
+										<div class="sport_video mb20">
+						<ul id="slidePanel">
+														<li><a href="http://www.gewara.com/activity/8663719" title="尝新鲜之一起上红场打羽毛球" target="_blank"><img width="310" height="200" alt="尝新鲜之一起上红场打羽毛球" src="http://img5.gewara.com/sw270h200/images/common/201309/s503c7d69_14139b15eeb__7dcc.jpg" /></a></li>
+													</ul>
+						<div class="control" id="controlChild"></div>
+					</div>
+										<div id="activityDiv"></div>
+					<div id="walaDiv"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<style type="text/css">
+	.chatOnlineRight{right:0px!important; top:200px; height:86px; width:35px; background:url(http://static5.gewara.com/css/home/onlineChat.gif) 0 0 no-repeat!important;}
+	.chatOnlineRight:hover{background:url(http://static5.gewara.com/css/home/onlineChat.gif) -51px 0 no-repeat!important;}
+</style>
+<div class="ui_footer">
+	<div class="ui_layout ui_layout_footer">
+		<div class="siteList">
+						<p><b>格瓦拉：</b><a rel="nofollow" href="/shanghai">上海</a><span>|</span><a rel="nofollow" href="/beijing">北京</a><span>|</span><a rel="nofollow" href="/hangzhou">杭州</a><span>|</span><a rel="nofollow" href="/ningbo">宁波</a><span>|</span><a rel="nofollow" href="/jiaxing">嘉兴</a><span>|</span><a rel="nofollow" href="/shaoxing">绍兴</a><span>|</span><a rel="nofollow" href="/huzhou">湖州</a><span>|</span><a rel="nofollow" href="/taizhou">台州</a><span>|</span><a rel="nofollow" href="/nanjing">南京</a><span>|</span><a rel="nofollow" href="/wuxi">无锡</a><span>|</span><a rel="nofollow" href="/changzhou">常州</a><span>|</span><a rel="nofollow" href="/suzhou">苏州</a><span>|</span><a rel="nofollow" href="/nantong">南通</a><span>|</span><a rel="nofollow" href="/guangzhou">广州</a><span>|</span><a rel="nofollow" href="/shenzhen">深圳</a><span>|</span><a rel="nofollow" href="/foshan">佛山</a><span>|</span><a rel="nofollow" href="/wuhan">武汉</a><span>|</span><a rel="nofollow" href="/chongqing">重庆</a><span>|</span><a rel="nofollow" href="/chengdu">成都</a><span>|</span><a rel="nofollow" href="/tianjin">天津</a><span>|</span><a rel="nofollow" href="/hefei">合肥</a><span>|</span><a rel="nofollow" href="/fuzhou">福州</a><span>|</span><a rel="nofollow" href="/cityList.xhtml">更多</a></p>
+		</div>
+		<div class="aboutGewara clear">
+			<div class="left">
+				<dl class="links">
+					<dt><span title="格瓦拉生活网" class="logo">格瓦拉生活网</span></dt>
+					<dd>
+						<a href="/service/about.dhtml" target="_blank" rel="nofollow">关于我们</a><span>|</span>
+						<a href="/helpCenter/index.dhtml" target="_blank" rel="nofollow">帮助中心</a><span>|</span>
+						<a href="/service/marketing.dhtml" target="_blank" rel="nofollow">联系我们</a><span>|</span>
+						<a href="/service/treaty.dhtml" target="_blank" rel="nofollow">服务条款</a><span>|</span>
+						<a href="/service/law.dhtml" target="_blank" rel="nofollow">法律声明</a><br />
+						<a href="/service/buss.dhtml" target="_blank" rel="nofollow">商家登陆</a><span>|</span>
+						<a href="/subject/advertIndex.xhtml" target="_blank" rel="nofollow">团体购票</a><span>|</span>
+						<a href="/service/job.dhtml" target="_blank" rel="nofollow">招聘英才</a><span>|</span>
+						<a href="/link.dhtml" target="_blank">友情链接</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="right">
+				<dl class="contact">
+					<dt></dt>
+					<dd>客服电话<br /><b>4000-406-506</b></dd>
+				</dl>
+				<dl class="apps">
+					<dt>手机版</dt>
+					<dd><a href="/mobile/index.xhtml" title="iPhone版" target="_blank">iPhone版</a><a class="android" href="/mobile/index.xhtml" title="Android版" target="_blank">Android版</a></dd>
+				</dl>
+			</div>
+		</div>
+		<div class="ui_copyright">
+			<p>
+				<span>Copyright &copy; 2007–2013 Gewara.</span>
+				<span>All Rights Reserved</span>
+				<span><a href="http://www.miibeian.gov.cn/" target="_blank">沪ICP备09050772号</a></span>
+				<span>ICP证：沪B2-20120044</span>
+			</p>
+			<p class="footer_tag">
+				<a href="http://online.unionpay.com/static/merchant/sgmc_9_1_1.html" target="_blank" rel="nofollow"><img src="http://img.gewara.cn/css/images/blank.gif" width="146" height="44"/></a>
+				<a href="https://ss.cnnic.cn/verifyseal.dll?sn=2011052300100008956" target="_blank" rel="nofollow"><img src="http://img.gewara.cn/css/images/blank.gif" width="115" height="44" style="background-position:0 -135px"/></a>
+				<a href="http://www.ectrustprc.org.cn/certificate.id/certificateb.php?id=20098540" target="_blank" rel="nofollow"><img src="http://img.gewara.cn/css/images/blank.gif" width="140" height="44" style="background-position:0 -45px"/></a>
+				<a href="https://www.alipay.com/aip/aip_validate_list.htm?trust_id=AIP01027377" target="_blank" rel="nofollow"><img src="http://img.gewara.cn/css/images/blank.gif" width="135" height="44" style="background-position:0 -90px"/></a>
+				<a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=20120326180136168" target="_blank" rel="nofollow"><img src="http://img.gewara.cn/css/images/blank.gif" height="44" width="115" style="background-position:0 -180px"/></a>
+				<a href="http://pinggu.zx110.org/review_url_www.gewara.com" target="_blank" rel="nofollow"><img src="http://img.gewara.cn/css/images/blank.gif" height="44" width="115" style="background-position:0 -225px"/></a>
+				
+			</p>
+		</div>
+	</div>
+</div>
+<span class="ui_view_menu chatOnlineRight" onclick="javascript:window.open('/chat.html','gewara','height=473,width=703,top=200,left=200,status=yes,toolbar=no,menubar=no,resizable=no,scrollbars=no,location=no,titlebar=no');">&nbsp;</span>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-1810182-1']);
+_gaq.push(['_setCustomVar', 1,'userlogin','',1]);
+_gaq.push(['_addOrganic', 'baidu', 'word']);
+_gaq.push(['_addOrganic', 'baidu', 'w']);
+_gaq.push(['_addOrganic', 'baidu', 'q1']);
+_gaq.push(['_addOrganic', 'google', 'as_q']);
+_gaq.push(['_addOrganic', 'soso', 'w']);
+_gaq.push(['_addOrganic', 'yodao', 'lq']);
+_gaq.push(['_addOrganic', 'sogou', 'query']);
+_gaq.push(['_addOrganic', '360', 'q']);
+_gaq.push(['_addOrganic', 'so.com', 'q']);
+_gaq.push(['_trackPageview']);
+window.addEvent('domready',function(){
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = 'http://www.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+		$$(".ADPOSITION").each(function(item){
+		var a = item.getElement('a');
+		var img = a.getElement('img');
+		var pid = item.getElement("input").value;
+		if(img && pid) {
+			GewaraUtil.sendRequest("/ajax/common/getRandomAd.xhtml",{"pid":pid}, function(result){
+				if(result.success && result.adpath){
+					item.removeClass("none");
+					img.src=result.adpath;
+					img.alt=result.title;
+					a.href=result.link;
+					a.title=result.title;
+					a.addEvent('click',function(){
+						_gaq.push(['_trackEvent', 'AD', result.pid, result.logicaldir]);
+					});
+				}else{
+					item.empty();
+				}
+			}, 'get');
+		}
+	});
+});
+</script><script type="text/javascript">
+window.addEvent('domready',function(){
+	getActivityList();
+	getWalaList();
+	 new toggleImage(); 	selectBar();
+	$('sportname2').addEvents({
+	 	'focus':function(){this.getParents('div[class*="search_kuang"]').addClass('search_kuangClicked');},
+	 	'blur':function(){this.getParents('div[class*="search_kuang"]').removeClass('search_kuangClicked');}
+	});
+		(function(){
+		gewaUtil.affix($('ui_left'));
+	}).delay(500);
+		getMySportids();
+	});
+
+var toggleImage = new Class({
+	Implements: [Options,Events],
+	options: {'panel':'slidePanel',count:0,deep:0},
+	initialize:function(options){
+		this.setOptions(options);
+		this.panel = $(this.options.panel);
+		this.lis = this.panel.getElements('li');
+		this.options.count = this.lis.length;
+		this.runcallbackEvent();
+	},
+	runbackofaway:function(){
+		if(this.options.deep > this.options.count - 1)this.options.deep = 0;
+		this.auto(this.lis[this.options.deep]);
+		this.options.deep++;
+	},
+	runcallbackEvent:function(){
+		var self = this;
+		this.lis.each(function(img,index){
+			if(index != 0){img.fade(0);}
+			var span = new Element('span',{'class':(index==0)?'select':''}).addEvents({
+				'mouseenter':function(){
+					$clear(self.options.clear);
+					self.auto(this.retrieve('key'));
+				},
+				'mouseleave':function(){self.options.clear = self.autoPlay.periodical(5000,self);}
+			}).inject('controlChild');
+			img.store('key',span);
+			span.store('key',img);
+		});
+		this.options.clear = this.autoPlay.periodical(5000,this);
+	},
+	autoPlay:function(){
+		this.runbackofaway();
+	},
+	auto:function(el){
+		$('controlChild').getElements('span').removeClass('select');
+		this.lis.fade(0);
+		el.fade(1);
+		el.retrieve('key').addClass('select');
+	}
+})
+function selectBar(){
+	var simulateSelect = $$('.simulate_select');
+	simulateSelect.each(function(item){
+		item.addEvent('click',function(){
+			item.getNext().toggle();
+		})
+		item.getParent().addEvent('mouseleave',function () {
+			item.getNext().hide();
+		})
+		item.getNext().getElements('a').addEvent('click',function (e){
+			e.preventDefault();
+			if(item.getElement('.simulate_value').get('value') != this.get('data-value')) {
+				sorder(this.get('data-value') ? this.get('data-value') : "");
+			}
+		});
+	});
+}
+function sorder(order){
+	$('order').value = order;
+	$('searchForm').submit();
+}
+function searchPPPV(field, value){
+	//clearPPPV();
+	$(field).value = value;
+	if(field == 'lineid'){
+		$('countycode').value = '';
+		$('indexareacode').value = '';
+	}else if(field == 'countycode'){
+		$('lineid').value = '';
+		$('sportids').value = '';
+	}else if(field == 'indexareacode'){
+		$('lineid').value = '';
+	}
+	$('searchForm').submit();
+}
+function allPPPV(){
+	clearPPPV();
+	$('searchForm').submit();
+}
+function clearPPPV(){
+	$('park').value = '';
+	$('indoor').value = '';
+	$('outdoor').value = '';
+	$('visacard').value = '';
+	$('bathe').value = '';
+	$('cupboard').value = '';
+	$('restregion').value = '';
+	$('sale').value='';
+	$('train').value='';
+	$('meal').value='';
+	$('maintain').value='';
+	$('lease').value='';
+}
+function searchRemoveKey(key, value){
+	$(key).value = '';
+	if(key == 'countycode'){
+		$('indexareacode').value = '';	
+	}
+	$('searchForm').submit();
+}
+function searchPPPV2(el, value){
+	if($(el).value != value){
+		$(el).value = value;
+	}else{
+		$(el).value = '';
+	}
+	$('searchForm').submit();
+}
+function searchname(field, value){
+	if($('sportname2').value=='请输入搜索关键词' || $('sportname2').value == ''){
+		$('sportname2').focus();
+		$('sportname2').value = '';
+		return;
+	};
+	$(field).value= value;
+	$('searchForm').submit();
+}
+function getActivityList(){
+	var url = '/sport/ajax/getActivityList.xhtml';
+	var values = {};
+	GewaraUtil.sendLoad('activityDiv',url, values, function(result){});
+}
+function getWalaList(){
+	var url = '/sport/ajax/getWalaList.xhtml';
+	var values = {};
+	GewaraUtil.sendLoad('walaDiv',url, values, function(result){});
+}
+function setSportids(){
+	$('countycode').value = '';
+	$('indexareacode').value = '';
+	$('sportids').value = $('tempids').value;
+	$('searchForm').submit();
+}
+function getMySportids(){
+	var url = '/sport/ajax/getMyFrequented.xhtml';
+	var values = {};
+	GewaraUtil.sendRequest(url, values, function(result){
+		if(result.success){
+			if(result.retval != ""){
+				$('tempids').value = result.retval;
+				$('myBuyTicketSport').removeClass("none");
+			}
+		}
+	});
+}
+</script>
+</body>
+<!-- SUCCESS_BOTTOM -->
+</html><!--Valid: Sun Sep 22 17:02:15 CST 2013 -->

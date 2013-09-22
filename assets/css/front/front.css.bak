@@ -81,6 +81,11 @@ margin-bottom: 0;
 /* -----------------------------------------------------
  * 运动馆首页列表样式
  * ----------------------------------------------------- */
+
+/*
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,bloc
+kquote,th,td,ins,img{margin:0;padding:0;word-wrap:break-word}
+*/
 div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,bloc
 kquote,th,td,ins,img{margin:0;padding:0;word-wrap:break-word}
 
