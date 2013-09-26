@@ -1,9 +1,14 @@
 @charset "UTF-8";
 
-
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,bloc
+kquote,th,td,ins,img {
+    margin:0;padding:0;word-wrap:break-word
+}
 body {
     padding-top: 60px;
     padding-bottom: 40px;
+    font:12px/22px verdana,Arial,Helvetica,'宋体',sans-serif;color:#333;
+    background-color: #e5e5e5;
   }
   .sidebar-nav {
     padding: 9px 0;
@@ -17,7 +22,6 @@ body {
       padding-right: 5px;
     }
   }
-
 i {
   padding-right: 0;
 }
