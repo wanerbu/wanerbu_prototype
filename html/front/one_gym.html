@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>玩儿不 场馆</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="玩儿不">
+    <meta name="author" content="wanerbu">
+
+    <link href="../../plugins/bootstrap/css/bootstrap.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/formtastic.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/wanerbu_formtastic.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/common.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/front/front.css" media="all" rel="stylesheet" type="text/css" />
+	
+<style type="text/css">	 			
+/*总体样式*/
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,bloc
+kquote,th,td,ins,img{margin:0;padding:0;word-wrap:break-word}
+html{background:#f2f2f2}
+body{font:12px/22px verdana,Arial,Helvetica,'宋体',sans-serif;color:#333}
+
+/*场馆标题样式*/
+.clear{zoom:1}
+h1,h2,h3,h4,h5,h6{display:inline}
+.clear{position:relative;height:46px}
+.detail_head h1{font:30px/45px "微软雅黑","宋体"}
+.detail_head .detailPa h1 span{font-size:18px;margin-left:10px;color:#999}
+.detail_head {position:relative;padding:10px 10px 20px;width:1190px;}
+.detail_head .detailPa{height:auto;line-height:22px;width:100%;}
+.detail_head .detailPa span.mark {width:74px;height:59px;background-position:0 -42px;top:-10px;left:-10px;}
+.detail_head .detailName{border-bottom:1px solid #eee;padding-bottom:10px;}
+
+/*评分*/
+.ml15 {margin-left: 15px;}
+.mt10 {margin-top: 10px;}
+.left {float: left;}
+.ui_big_ratings {
+width: 130px;
+height: 24px;
+overflow: hidden;
+line-height: 24px;
+float: left;
+}
+.ui_big_ratings li.half {
+background-position: 1px 0;
+}
+.ui_big_ratings li {
+width: 13px;
+height: 24px;
+float: left;
+background-position: -25px 0;
+cursor: default;
+overflow: hidden;
+}
+.ratings li, .ui_big_ratings li, .initRating span {
+background: url(../../assets/img/ico_star.gif) no-repeat;
+}
+
+ul li {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+.ui_big_ratings li.on {
+background-position: -12px 0;
+}
+.ui_big_ratings li.no {
+background-position: -38px 0;
+}
+
+
+.bigSubp {
+vertical-align: -4px;
+height: 30px;
+line-height: 30px;
+display: inline-block;
+}
+
+.bigSubp sub {
+font-size: 30px;
+}
+
+sub {
+font-size: 22px;
+font-size: 28px\9;
+font-style: italic;
+color: #f60;
+line-height: 24px;
+vertical-align: middle;
+margin-left: 10px;
+}
+
+.bigSubp sup {
+font-size: 20px;
+}
+
+sup {
+font-weight: normal;
+font-size: 16px;
+font-style: italic;
+color: #f60;
+line-height: 20px;
+vertical-align: top;
+margin-left: 2px;
+}
+
+.ratingsCount {
+margin: 10px 0 0 20px;
+}
+
+.ratingsCount ul li {
+float: left;
+margin-right: 10px;
+color: #666;
+}
+
+.ratingsCount a.cou {
+background-position: 6px -177px;
+padding: 0 7px 0 30px;
+}
+
+.ratingsCount a {
+background: url("../../assets/img/cinemaico.gif") no-repeat 0 0;
+cursor: pointer;
+color: #666;
+height: 26px;
+line-height: 27px;
+display: inline-block;
+border: 1px solid #e5e5e5;
+border-radius: 3px;
+}
+
+a {
+color: #c30;
+text-decoration: none;
+outline: 0;
+}
+
+.ratingsCount a.ad {
+background-position: 6px -205px;
+padding: 0 7px 0 30px;
+}
+
+.ratingsCount a.se {
+color: #c30;
+background-position: 6px -325px;
+}
+
+.none {
+display: none!important;
+}
+
+/*Topic行*/
+
+.itemTopic {
+overflow: hidden;
+padding-top: 10px;
+}
+.ui_media, .ui_text {
+overflow: hidden;
+zoom: 1;
+}
+
+.ui_media{
+float: left;
+}
+.ui_text{
+float: left;
+}
+.ui_map{
+float: left;
+}
+
+.itemTopic{
+margin-right: 15px;
+}
+.ui_media{
+margin-right: 10px;
+float: left;
+}
+
+.itemTopic .ui_summary_big {
+color: #333;
+font: 12px/22px "宋体";
+padding-left: 26px;
+margin-top: 10px;
+position: relative;
+width: 524px;
+}
+
+.itemTopic .ui_summary_big span.first {
+position: absolute;
+left: 0;
+top: 0;
+}
+
+.ui_summary_big span.first {
+background-position: 0 2px;
+margin: 0 10px 0 0;
+}
+
+.ui_summary_big span {
+background-position: 0 -19px;
+display: inline-block;
+margin: 0 0 0 10px;
+height: 13px;
+width: 18px;
+}
+
+.ui_summary span, .ui_summary_big span, .screenList a img.seatPic {
+background: url(../../assets/img/ico_pub.gif) no-repeat;
+}
+.itemTopic .ui_summary_big {
+color: #333;
+font: 12px/22px "宋体";
+}
+
+.itemTopic dl {
+margin-bottom: 1px;
+}
+
+.mt30 {
+margin-top: 30px!important;
+}
+.clear, .button, .ui_layout, .abeam, .list li, .tales60, .tales100, .selectOptions, .inner {
+zoom: 1;
+}
+
+.itemTopic dt {
+float: left;
+color: #999;
+width: 68px;
+}
+
+
+dd {
+display: block;
+-webkit-margin-start: 40px;
+}
+
+/*map*/
+.detail_head .map {
+width: 240px;
+float: left;
+}
+
+.detail_head .map .mapInfo {
+border: 1px solid #cecece;
+}
+
+</style>  
+
+	<script src="../../plugins/jquery/js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="../../plugins/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+	
+	<script>
+		// 导入外部文件部分
+	    $(function(){
+	      $("#navbar").load("top_nav.html"); 
+	      $("#footer").load("footer.html"); 
+	    });
+    </script> 
+   
+</head>
+
+  <body>
+  	<!-- 导航部分 -->
+    <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    </div>
+  
+    <div class="container">
+      <div class="row-fluid">
+	  	<div class="detail_head">
+			<div class="detailPa">
+			   <div class="detailName clear">
+					<h1 class="left">虹桥临空SOHO羽毛球馆</h1>		
+		            <div class="left clear mt10 ml15"><!-- 传评分数gmark -->
+					 <ul class="ui_big_ratings"><!-- 大的评分 -->
+										<li class="half"></li>
+										<li class="on"></li>
+										<li class="half"></li>
+										<li class="on"></li>
+										<li class="half"></li>
+										<li class="on"></li>
+										<li class="half"></li>
+										<li class="on"></li>
+										<li class="half"></li>
+										<li class="no"></li>
+						</ul>
+						<span class="bigSubp left"><sub id="mark_integer">8</sub><sup id="mark_decimal">.7</sup></span>
+				     </div>
+					 <div class="ratingsCount left">
+						<ul>
+							<li><a href="javascript:showMovieMark();" class="cou">我要评分</a></li>
+							<li>
+								<span><a href="javascript:addCollection();" class="ad" id="nCollect">感兴趣</a></span>
+								<span><a href="javascript:cancelTreasure();" class="ad se none" id="hCollect">取消感兴趣</a></span>
+							</li>
+						</ul>
+					</div>
+			   </div><!--detailName-->
+			</div><!--detailPa-->
+         </div><!--detail head-->
+		 <div class="mod_bd itemTopic">
+			<div class='ui_media span3'>
+			  <div id="myCarousel" class="carousel slide">
+				<div class="carousel-inner">
+				  <div class="item active">
+					<img src="../../assets/img/1.jpeg" alt="" class='img-polaroid'>
+					<div class="container">
+					  <div class="carousel-caption">
+						<a class="btn btn-large btn-primary" href="#">Sign up today</a>
+					  </div>
+					</div>
+				  </div>
+				  <div class="item">
+					<img src="../../assets/img/2.jpeg" alt="" class='img-polaroid'>
+					<div class="container">
+					  <div class="carousel-caption">
+						<p class="lead">football, let`s go!</p>
+						<a class="btn btn-large btn-primary" href="#">Learn more</a>
+					  </div>
+					</div>
+				  </div>
+				  <div class="item">
+					<img src="../../assets/img/3.jpeg" alt="" class='img-polaroid'>
+					<div class="container">
+					  <div class="carousel-caption">
+						<p class="lead">football, let`s go!</p>
+						<a class="btn btn-large btn-primary" href="#">Browse gallery</a>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+				<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+			  </div><!-- /.carousel -->
+            </div><!-- /.ui_media-->
+			<div class='ui_text'>
+				 <p class="ui_summary_big"><span class="first"></span>
+					位于C栋二楼的“虹桥临空·SOHO中国”室内羽毛球馆，建筑面积达1300多平方米，拥有10片标准塑胶羽毛球场地，场馆内设2个VIP贵宾房，独立的运动空间，休息区。 
+					<a class="ffst cSport ml5" target="_blank" style="display:inline-block;" href="/news/47602086">详情&gt;&gt;</a>																<span></span>
+				  </p>
+							<dl class="mt30">
+								<dt>详细地址：</dt>
+								<dd><a class="cSport" href="/sport/sportList.xhtml?countycode=310105" title="长宁区" target="_blank">长宁区</a>协和路1551号(临虹路口)<span class="ffst">[<a href="/common/baiduMap.xhtml?id=37597055&amp;tag=sport" target="_blank">地图</a>]</span></dd>
+							</dl>
+							<dl class="clear">
+								<dt>联系电话：</dt>
+								<dd>021-33603196</dd>
+							</dl>
+							<dl class="clear">
+								<dt>运动项目：</dt>
+								<dd>羽毛球&nbsp;</dd>
+							</dl>
+			</div><!--ui_text-->
+			<div class='ui_map'>
+					<div class="map">
+						 <script type="text/javascript">
+							window.addEvent('load',function(){
+								gewa.util.getMap();
+								gewaUtil.textOver('.text');
+							});
+							gewa.util.getMap = function(){
+								gewa.util.getMap.loading = new Element('div',{'styles':{'position':'absolute','width':'100%','height':'100%','left':0,'top':0,'background':'#fefefe url(http://static5.gewara.com/css/images/loading.gif) center center no-repeat'}}).inject('loadMap');
+								(function(){
+									Asset.javascript('http://api.map.baidu.com/getscript?v=1.2&t='+gewara.util.rtime(), {
+										id: 'baiduScript',
+										onLoad: function(){
+											var map =new BMap.Map("map_canvas"); //创建Map实例
+																var pointy = '121.358869';
+												var pointx = '31.236453';
+												if(!(pointx > -90 && pointx < 90) || !(pointy > -180 && pointy < 180)){
+													var point =new BMap.Point(31.255583 ,121.486749);	
+												}else{
+													var point =new BMap.Point(121.358869 ,31.236453); //创建点坐标
+												}
+															map.centerAndZoom(point,15); //初始化地图,设置中心点坐标和地图级别。
+											//创建标记
+											var marker=new BMap.Marker(point);
+											map.addOverlay(marker);
+											gewa.util.getMap.loading.dispose();
+										}
+									});
+								}).delay(2000);
+								tabs();
+							}
+							function searchLine(){
+								var url = '/common/baiduMap.xhtml?id=37597055&tag=sport&from='+encodeURI($('fromAddress').value)+'&end='+encodeURI($('endAddress').value)+'&title='+encodeURI($('addressTitle').value);
+								GewaraUtil.openwin(url,'_blank');
+							};
+							function tabs(){
+								var elements = $$('.search_icon_tab a');
+								elements.addEvent('click',function(){
+									elements.each(function(item){
+										item.removeClass('select');
+									})
+									this.addClass('select');
+									$('addressTitle').value = this.get('title');
+								})
+							}
+							</script>
+<div class="mapInfo">
+	<div id="loadMap" style="position:relative;overflow:hidden;">
+		<form action="/common/baiduMap.xhtml" target="_blank">
+			<input type="hidden" name="tag" id="tag" value="sport">
+			<input type="hidden" name="id" id="id" value="37597055">
+			<div id="map_canvas" style="width: 100%; height: 145px; overflow: hidden; position: relative; z-index: 0; background-color: rgb(243, 241, 236); color: rgb(0, 0, 0); text-align: left;"><div style="overflow: visible; position: absolute; z-index: 0; left: 0px; top: 0px; cursor: url(http://api.map.baidu.com/images/openhand.cur) 8 8, default;"><div class="BMap_mask" style="position: absolute; left: 0px; top: 0px; z-index: 9; overflow: hidden; -webkit-user-select: none; width: 238px; height: 145px;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;"><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 800;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 700;"><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; background-image: url(http://api.map.baidu.com/images/blank.gif); width: 19px; height: 25px; left: 109px; top: 48px; z-index: -6247290; background-position: initial initial; background-repeat: initial initial;" title=""></span></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 600;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 500;"></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 400;"><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 109px; top: 48px; z-index: -6247290;"><div style="position: absolute; margin: 0px; padding: 0px; width: 19px; height: 25px; overflow: hidden;"><img src="http://api.map.baidu.com/images/marker_red_sprite.png" style="border:none;left:0px; top:0px; position:absolute;"></div></span></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 300;"><span unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 20px; height: 11px; left: 113px; top: 62px;"><div style="position: absolute; margin: 0px; padding: 0px; width: 20px; height: 11px; overflow: hidden;"><img src="http://api.map.baidu.com/images/marker_red_sprite.png" style="border:none;left:-19px; top:-13px; position:absolute;"></div></span></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;"></div></div><div style="position: absolute; top: 0px; left: 0px; z-index: 1;"><div style="position: absolute; z-index: -100; left: 119px; top: 72px;"><img src="http://online3.map.bdimg.com/tile/?qt=tile&amp;x=6596&amp;y=1777&amp;z=15&amp;styles=pl&amp;udt=20130712" style="position: absolute; border: none; width: 256px; height: 256px; left: -143px; top: -26px; opacity: 1;"><img src="http://online4.map.bdimg.com/tile/?qt=tile&amp;x=6597&amp;y=1777&amp;z=15&amp;styles=pl&amp;udt=20130712" style="position: absolute; border: none; width: 256px; height: 256px; left: 113px; top: -26px; opacity: 1;"><img src="http://online4.map.bdimg.com/tile/?qt=tile&amp;x=6596&amp;y=1778&amp;z=15&amp;styles=pl&amp;udt=20130712" style="position: absolute; border: none; width: 256px; height: 256px; left: -143px; top: -282px; opacity: 1;"><img src="http://online0.map.bdimg.com/tile/?qt=tile&amp;x=6597&amp;y=1778&amp;z=15&amp;styles=pl&amp;udt=20130712" style="position: absolute; border: none; width: 256px; height: 256px; left: 113px; top: -282px; opacity: 1;"></div></div><div style="position: absolute; top: 0px; left: 0px; z-index: 2;"></div></div><div class=" anchorBL" style="height: 32px; position: absolute; z-index: 10; bottom: 0px; right: auto; top: auto; left: 1px;"><a title="到百度地图查看此区域" target="_blank" href="http://map.baidu.com/?sr=1" style="outline: none;"><img style="border:none;width:77px;height:32px" src="http://api.map.baidu.com/images/copyright_logo.png"></a></div><div id="zoomer" style="position:absolute;z-index:0;top:0px;left:0px;overflow:hidden;visibility:hidden;cursor:url(http://api.map.baidu.com/images/openhand.cur) 8 8,default"><div class="BMap_zoomer" style="top:0;left:0;"></div><div class="BMap_zoomer" style="top:0;right:0;"></div><div class="BMap_zoomer" style="bottom:0;left:0;"></div><div class="BMap_zoomer" style="bottom:0;right:0;"></div></div><div unselectable="on" class=" BMap_cpyCtrl anchorBL" style="cursor: default; white-space: nowrap; color: black; background-image: none; font-style: normal; font-variant: normal; font-weight: normal; font-size: 11px; line-height: 15px; font-family: arial, sans-serif; bottom: 2px; right: auto; top: auto; left: 81px; position: absolute; z-index: 10; background-position: initial initial; background-repeat: initial initial;"><span _cid="1"><span style="font-size:11px">© 2013 Baidu</span></span></div></div>
+		</form>
+	</div>
+</div>
+<div class="mapModify">
+	<div class="search_icon_tab clear">
+		<a class="select" href="javascript:void(0);" title="驾车"><img class="car" src="http://img6.gewara.com/css/images/blank.gif"></a>
+		<a href="javascript:void(0);" title="公共交通"><img class="bus" src="http://img6.gewara.com/css/images/blank.gif"></a>
+		<a href="javascript:void(0);" title="步行"><img class="men" src="http://img6.gewara.com/css/images/blank.gif"></a>
+	</div>
+	<input type="hidden" name="title" value="" id="addressTitle">
+	<div class="search_form">
+		<ul>
+			<li>
+				<span class="map_ico_a" title="起点"></span>
+				<input id="fromAddress" style="width:174px;" class="text" type="text" alt="请输入起点"><label class="overTxtLabel" for="fromAddress" style="line-height: 29px; height: 29px; position: absolute; cursor: text; color: rgb(204, 204, 204); width: 184px; text-indent: 6px; left: 0px; top: 1px;">请输入起点</label>
+			</li><li>
+				<span class="map_ico_b" title="终点"></span>
+				<input id="endAddress" style="width:174px;" class="text" type="text" value="虹桥临空SOHO羽毛球馆">
+			</li>
+		</ul>
+		<p class="mt10"><a class="button minBt redBt" href="javascript:void(0);" onclick="searchLine();return false;"><span>查询路线</span></a></p>
+	</div>
+</div>
+					</div>
+			</div><!--ui_map-->
+
+
+         </div><!--itemTopic-->
+      </div><!-- /.row-fluid -->
+      <hr>
+	<!-- 底部footer -->
+      <footer id="footer">
+      </footer>
+    </div><!--/.container-->
+
+  </body>
+</html>
