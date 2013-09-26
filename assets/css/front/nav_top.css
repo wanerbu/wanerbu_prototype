@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+#navbar .wanerbu-nav-top {
+  background-image: none;
+  background-color: #1874CD;
+  color: #ffffff;
+}
+
+#navbar ul.nav > li > a {
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+.wanerbu-active {
+  font-weight: bold;
+}
+
+#navbar ul.nav > li {
+  padding: 0;
+  margin: 0px 15px;
+}
+
+#navbar ul.nav > li > a {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#navbar .nav li:hover,
+#navbar .nav > li.wanerbu-active {
+  border-color: #FF4500;
+}
+
+#navbar ul.nav > li {
+  border-bottom: 2px solid transparent;
+}
+
+.top-query {
+  float: left;
+  margin: 6px 0 0 60px;
+}

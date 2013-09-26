@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+.img-polaroid {
+padding: 0px;
+}
+
+.sub-title {
+  // background-color: #f5f5f5;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 5px;
+}
+
+.sub-title .main {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.sub-title .more {
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+
+.sub-content {
+  padding: 10px 5px;
+}
+
+.sport-item {
+  background: none;
+  text-align: center;
+}
+
+.sport-item p {
+  padding: 5px 0;
+}
+
+.sport-item .title {
+  font-size: 18px;
+}
+
+li.hot-activity {
+  font-size: 15px;
+  border-bottom: 1px dotted #e5e5e5;
+  padding: 3px;
+}
+
+li.hot-activity span {
+  display: inline-table;
+}
+
+li.hot-activity .title {
+  width: 45%;
+  padding: 0 5px;
+}
+
+li.hot-activity .hot-rate {
+  width: 30%;
+}
+
+li.hot-activity .activity-detail {
+  width: 20%;
+  text-align: right;
+}
+
+li.hot-activity:nth-child(odd){
+  background-color: #F0F8FF;
+  border-radius: 3px;
+}
+
+.tab-content {
+  overflow: auto;
+}
