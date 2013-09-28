@@ -22,6 +22,12 @@ dt,dd {line-height: 30px;}
 .condition a.selected{background:#1885ae;color:#fff}
 .condition a:hover{background:#1885ae;color:#fff;text-decoration:none}
 
+/*nav 样式*/
+ul.nav-tabs li a{
+ font-size: 16px;
+ font-weight: bold;
+}
+
 /*图片样式*/
 .ui_media .ui_pic{margin-right:10px;float:left}
 

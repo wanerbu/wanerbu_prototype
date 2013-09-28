@@ -4,20 +4,20 @@
 * ----------------------------------------------------- */
 
 /*场馆标题样式*/
-.clear{zoom:1}
-h1,h2,h3,h4,h5,h6{display:inline}
+.detail_head {position:relative;padding:10px 10px 20px;}
 .clear{position:relative;height:46px}
-.detail_head h1{font:30px/45px "微软雅黑","宋体"}
-.detail_head .detailPa h1 span{font-size:18px;margin-left:10px;color:#999}
-.detail_head {position:relative;padding:10px 10px 20px;width:1190px;}
-.detail_head .detailPa{height:auto;line-height:22px;width:100%;}
-.detail_head .detailPa span.mark {width:74px;height:59px;background-position:0 -42px;top:-10px;left:-10px;}
-.detail_head .detailName{border-bottom:1px solid #eee;padding-bottom:10px;}
+.clear{zoom:1}
+ .detailName{border-bottom:1px solid #eee;padding-bottom:10px;}
+ 
+ h1,h2,h3,h4,h5,h6{display:inline}
+ .left {float: left;}
+ h1{font:30px/45px "微软雅黑","宋体"}
+ h1 span{font-size:18px;margin-left:10px;color:#999}
 
-/*评分*/
+/*评分星星样式*/
 .ml15 {margin-left: 15px;}
 .mt10 {margin-top: 10px;}
-.left {float: left;}
+
 .ui_big_ratings {
 width: 130px;
 height: 24px;
@@ -37,7 +37,7 @@ cursor: default;
 overflow: hidden;
 }
 .ratings li, .ui_big_ratings li, .initRating span {
-background: url(../../img/ico_star.gif) no-repeat;
+background: url('../../img/ico_star.gif') no-repeat;
 }
 
 ul li {
@@ -52,7 +52,7 @@ background-position: -12px 0;
 background-position: -38px 0;
 }
 
-
+/*评分数字样式*/
 .bigSubp {
 vertical-align: -4px;
 height: 30px;
@@ -88,6 +88,7 @@ vertical-align: top;
 margin-left: 2px;
 }
 
+/*我要评分/感兴趣样式*/
 .ratingsCount {
 margin: 10px 0 0 20px;
 }
@@ -135,11 +136,14 @@ display: none!important;
 }
 
 /*Topic行*/
-
 .itemTopic {
 overflow: hidden;
 padding-top: 10px;
 }
+.itemTopic{
+margin-right: 15px;
+}
+
 .ui_media, .ui_text {
 overflow: hidden;
 zoom: 1;
@@ -148,6 +152,11 @@ zoom: 1;
 .ui_media{
 float: left;
 }
+.ui_media{
+margin-right: 10px;
+float: left;
+}
+
 .ui_text{
 float: left;
 }
@@ -155,12 +164,8 @@ float: left;
 float: left;
 }
 
-.itemTopic{
-margin-right: 15px;
-}
-.ui_media{
-margin-right: 10px;
-float: left;
+.ui_text a{
+  color: #3399CC; 
 }
 
 .itemTopic .ui_summary_big {
@@ -169,7 +174,6 @@ font: 12px/22px "宋体";
 padding-left: 26px;
 margin-top: 10px;
 position: relative;
-width: 524px;
 }
 
 .itemTopic .ui_summary_big span.first {
@@ -200,11 +204,11 @@ font: 12px/22px "宋体";
 }
 
 .itemTopic dl {
-margin-bottom: 1px;
+margin-bottom: 10px;
 }
 
-.mt30 {
-margin-top: 30px!important;
+.mt20 {
+margin-top: 20px!important;
 }
 .clear, .button, .ui_layout, .abeam, .list li, .tales60, .tales100, .selectOptions, .inner {
 zoom: 1;
@@ -216,18 +220,70 @@ color: #999;
 width: 68px;
 }
 
-
-dd {
-display: block;
--webkit-margin-start: 40px;
+.ui_map{
+margin-left: 45px;
 }
 
-/*map*/
-.detail_head .map {
-width: 240px;
-float: left;
+.details{
+margin-top: 20px
 }
 
-.detail_head .map .mapInfo {
-border: 1px solid #cecece;
+/*nav 样式*/
+ul.nav-tabs li a{
+ font-size: 16px;
+ font-weight: bold;
+}
+.details_ticket dl{
+ font-size: 14px;
+ margin-right: 0px;
+}
+
+.intro span{
+  color: #666666;
+  margin-right: 20px;
+}
+.intro{
+  margin-top: 20px;
+}
+
+.choose_head {
+	margin-top: 20px;
+    background-color: #EEEEEE;
+    line-height: 30px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+}
+
+.opiTime{
+	margin-left: 10px;
+}
+
+.opiPrice{
+	margin-left: 120px;
+}
+
+.opiPrice_body{
+	margin-left: 90px;
+}
+
+.opiPrice_body em{
+	-moz-text-decoration-line: line-through;
+}
+.opiInfo{
+	margin-left: 120px;
+}
+
+.opiInfo_body{
+	margin-left: 80px;
+}
+.opiAct{
+	margin-left: 120px;
+}
+
+.choose_body ul li{
+border-bottom-style: solid;
+border-bottom-color: #E4E4E4;
+border-bottom-width: 1px;
+padding-bottom: 9px;
 }
