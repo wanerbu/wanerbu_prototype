@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/* -----------------------------------------------------
+* 运动馆首页列表样式
+* ----------------------------------------------------- */
+
+.mt10{margin-top:10px}
+
+/*列表样式*/
+.dl-horizontal dd { margin-left: 80px;}
+dt,dd {line-height: 30px;}
+
+.ulist{margin-bottom:30px;font:12px/22px}
+.ulist li{line-height:24px;padding:3px 0 5px 0; list-style:none; margin:0px} 
+.ulist li a{white-space:nowrap}
+
+/*列表中标题样式*/
+.typeTitle{color:#999;position:absolute;left:0;top:0;line-height:24px}
+.dlTy{padding-left:0px;position:relative}
+
+/*条件链接样式*/
+.condition a{padding:3px 5px;margin:02px;color:#666}
+.condition a.selected{background:#1885ae;color:#fff}
+.condition a:hover{background:#1885ae;color:#fff;text-decoration:none}
+
+/*图片样式*/
+.ui_media .ui_pic{margin-right:10px;float:left}
+
+/*列表中场馆名标题样式*/
+.sportList a{color:#333}
+.sportList .title span{font:14px/26px verdana,Arial,'微软雅黑','宋体';font-weight:bold}
+
+/*effectLi让图片左对齐，并且去掉列表前面的点*/
+.sportList ul li.effectLi{padding:0 0 20px;border-bottom:1px solid #f4f4f4;margin-bottom:20px;position:relative;display:inline-block}
+
+/*列表中场馆详细信息样式*/
+.ui_text{color:#999}
+.sportList .ui_text p b{font-size:12px;margin-right:10px;color:#1885ae}
+
+/*评分样式*/
+.grade{margin:0 0 0 9px;font:12px/22px verdana,Arial,Helvetica,'宋体',sans-serif}
+.grade sub{font-size:24px;color:#f60;font-style:italic;vertical-align:middle}
+.grade sup{color:#f60;font-size:14px;font-style:italic;line-height:20px;margin-left:-4px;vertical-align:3px}
+
+/*[地图]颜色*/
+.ffst {font-family: '宋体' !important;}
+.cSport{color:#39c!important} 
+
+/*分页样式*/
+#page{font-size:12px;height:21px;width:auto;margin:20px auto;float:right}
+#page a,#page strong{float:left;margin:0 1px}
+#page a{display:inline-block;height:21px;line-height:21px;padding:0 8px}
+#page a:hover{background:#f60;color:#fff;text-decoration:none}
+#page .on,#page a.on:hover{background:#c30;color:#fff}
+#page a{color:#39c}
+#page a:hover{background:#3ae}
+#page .on,#page a.on:hover{background:#1885ae}
