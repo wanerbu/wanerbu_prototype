@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>玩儿不 虹桥临空SOHO羽毛球馆</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="玩儿不">
+    <meta name="author" content="wanerbu">
+
+    <link href="../../plugins/bootstrap/css/bootstrap.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/formtastic.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/wanerbu_formtastic.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/common.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/front/front.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/front/top_nav.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/front/reserve.css" media="all" rel="stylesheet" type="text/css" />
+
+	<script src="../../plugins/jquery/js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="../../plugins/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+	
+	<script>
+		// 导入外部文件部分
+	    $(function(){
+	      $("#navbar").load("top_nav.html"); 
+	      $("#footer").load("footer.html"); 
+	    });
+    </script> 
+   
+</head>
+
+  <body>
+  	<!-- 导航部分 -->
+    <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    </div>
+  
+    <div id="main-content" class="container">
+      <div class="row-fluid">
+		<div class="payStep02">
+			<ul class="payOrderSteps">
+				<li class="step1">1.选择场馆<i class="icon-forward"></i></li>
+				<li class="step2 setp_active">2.选择场次<i class="icon-forward"></i></li>
+				<li class="step3">3.确认支付<i class="icon-forward"></i></li>
+				<li class="step4">4.预订成功</li>
+			</ul>
+		</div><!--setp-->
+		<div class="seatGroup mt20">
+			<div class="ui_left span10">
+				<div class="seatViewTitle">
+					<div class="seatViewInfo">
+								<ul>
+									<li><span class="hasSeat"></span>可预订</li>
+									<li><span class="sellSeat"></span>已占用</li>
+									<li><span class="checkSeat"></span>已选场次</li>
+								</ul>
+					</div>
+				</div><!--view title-->
+				<div class="mod_tabs">
+					<div class="mod_hd">
+						<ul class="nav nav-tabs">
+								<li> <a href="javascript:searchPPPV('booking', '');">今天</a></li>
+								<li> <a href="javascript:searchPPPV('booking', '');">明天</a></li>
+								<li class="active"> <a href="javascript:searchPPPV('booking', '');">10/1 周二</a></li>
+								<li > <a href="javascript:searchPPPV('booking', '');">10/2 周三</a></li>
+						</ul>
+					</div>
+					<div class="mod_bd">
+						<div class="inner">
+							<div class="inner_table">
+								<dl class="has_pk">
+									<dt>
+										<span>1号场地</span>
+										<span>2号场地</span>
+									</dt>
+									<dd>
+										<div class="pk_table">
+											<div class="pk_rows">
+												<div class="pk_cols"><em>09:00</em></div>
+												<div class="pk_cols"><em>10:00</em></div>
+												<div class="pk_cols"><em>11:00</em></div>
+												<div class="pk_cols"><em>12:00</em></div>
+												<div class="pk_cols"><em>13:00</em></div>
+												<div class="pk_cols"><em>14:00</em></div>
+												<div class="pk_cols"><em>15:00</em></div>
+												<div class="pk_cols"><em>16:00</em></div>
+												<div class="pk_cols"><em>17:00</em></div>
+												<div class="pk_cols"><em>18:00</em></div>
+												<div class="pk_cols"><em>19:00</em></div>
+												<div class="pk_cols"><em>20:00</em></div>
+												<div class="pk_cols"><em>21:00</em></div>
+											</div>
+											<div class="pk_rows table_rows">
+												<div class="pk_cols">
+													<span title="该场次已售出" class="sellSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="12:00-13:00 1号场地 40元" class="hasSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="该场次已售出" class="sellSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="12:00-13:00 1号场地 40元" class="hasSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="该场次已售出" class="sellSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="12:00-13:00 1号场地 40元" class="hasSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="该场次已售出" class="sellSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="12:00-13:00 1号场地 40元" class="hasSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="该场次已售出" class="sellSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="12:00-13:00 1号场地 40元" class="hasSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="该场次已售出" class="sellSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="12:00-13:00 1号场地 40元" class="hasSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="12:00-13:00 1号场地 40元" class="hasSeat">
+													</span>
+												</div>
+											</div><!--pk_rows table_rows-->
+											<div class="pk_rows table_rows">
+												<div class="pk_cols">
+													<span title="该场次已售出" class="sellSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="12:00-13:00 1号场地 40元" class="hasSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="该场次已售出" class="sellSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="12:00-13:00 1号场地 40元" class="hasSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="该场次已售出" class="sellSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="12:00-13:00 1号场地 40元" class="hasSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="该场次已售出" class="sellSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="12:00-13:00 1号场地 40元" class="hasSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="该场次已售出" class="sellSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="12:00-13:00 1号场地 40元" class="hasSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="该场次已售出" class="sellSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="12:00-13:00 1号场地 40元" class="hasSeat">
+													</span>
+												</div>
+												<div class="pk_cols">
+													<span title="12:00-13:00 1号场地 40元" class="hasSeat">
+													</span>
+												</div>
+										</div><!--pk_table-->
+									</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--ui_left-->
+
+			<div class="ui_right span2">
+				<div class="innder">
+					<div class="pewSeat">
+						<p class="bold fs14"><a href="/sport/37597055">虹桥临空SOHO羽毛球馆</a></p>
+						<p class="mt10"><em>预订项目：</em><b>羽毛球</b></p>
+						<p><em>日期：</em><span class="cred fs14">2013-10-01(周二)</span></p>
+						<div class="mt10 choose_games">
+							<div class="choose_games_txt">场次：</div>
+							<div>
+								<span class="pews">还未选择场次</span>
+							</div>
+						</div>
+					</div>
+					<div class="rightBox">
+					<p>输入接收短信的手机号码</p>
+						<div class="mobileInfo mt10">
+							<p><em>手机号：</em>
+							<input class="span7" type="text">
+							<span class="cred">*</span>
+							</p>
+							<p class="mt10">
+							<em>验证码：</em>
+							<input class="span4" type="text">
+							<span class="cred">*</span>
+							</p>
+							<p class="ml10">
+							<button class="btn btn-primary" type="button" >提交订单</button>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div><!--ui_left-->
+
+		</div><!--seatGroup-->
+	  </div><!--/.row-fluid-->
+    </div><!--/.container-->
+    <!-- 底部footer -->
+    <footer id="footer">
+    </footer>
+  </body>
+</html>

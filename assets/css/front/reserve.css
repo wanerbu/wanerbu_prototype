@@ -1,0 +1,288 @@
+@charset "UTF-8";
+/* -----------------------------------------------------
+* 运动馆预订样式
+* ----------------------------------------------------- */
+
+/*步骤*/
+ul li {
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+.payOrderSteps {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #EEEEEE;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+}
+
+.payOrderSteps li {
+    color: #999999;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    width: 25%;
+}
+.step1, .step2, .step3, .step4 {
+    text-indent: -8px;
+}
+
+.setp_active{
+ color: #3399CC !important;
+}
+.mt20 {margin-top: 20px;}
+
+/*选场次信息*/
+
+.ui_left{
+   border-top-color: #BEE5F2;
+   border-top-style: solid;
+   border-top-width: 1px;
+   border-left-color: #BEE5F2;
+   border-left-style: solid;
+   border-left-width: 1px;
+   border-right-color: #BEE5F2;
+   border-right-style: solid;
+   border-right-width: 1px;
+   border-bottom-color: #BEE5F2;
+   border-bottom-style: solid;
+   border-bottom-width: 1px;
+}
+.seatViewTitle {
+    height: 32px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    position: relative;
+}
+.seatViewInfo{
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #F7F7F7;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    display: block;
+    height: 50px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 180px;
+}
+
+.seatViewInfo ul li {
+    float: left;
+    text-align: center;
+    width: 60px;
+}
+
+.seatViewInfo span {
+    cursor: default;
+    width: 45px;
+}
+
+/*可预订/已占用/已选场次 选择框样式*/
+.hasSeat, .checkSeat, .vipSeat, .actSeat, .sellSeat, .overSeat {
+    border-bottom-color: #BDBDBD;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-top-color: #BDBDBD;
+    border-top-style: solid;
+    border-top-width: 1px;
+	border-right-color: #BDBDBD;
+    border-right-style: solid;
+    border-right-width: 1px;
+	border-left-color: #BDBDBD;
+    border-left-style: solid;
+    border-left-width: 1px;
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    margin-bottom: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2px;
+}
+
+.sellSeat {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #FF573F;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+}
+
+.checkSeat {
+    background-image: url("../../img/cheakSeat.gif");
+    background-position: center 4px;
+    background-repeat: no-repeat;
+}
+
+.hasSeat{
+	cursor: pointer;
+}
+
+.has_pk dt {
+    float: left;
+    margin-top: 25px;
+    text-align: right;
+    width: 75px;
+}
+.has_pk dt span {
+    display: block;/*dt 中的内容竖着显示*/
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 8px;
+    width: 70px;
+}
+
+.pk_rows {
+    height: 30px;
+    line-height: 30px;
+}
+.pk_cols {
+    float: left;/*横着显示*/
+    margin-right: 8px;
+    text-align: center;
+    width: 45px;
+}
+
+.ui_right {
+background-color: #F1FBFF;
+}
+.row-fluid .span2 {
+    width: 16.89%;
+	margin-left: 0.13%;
+}
+.fs14 {
+    font-size: 14px;
+}
+a, a:hover {
+    -moz-text-blink: none;
+    -moz-text-decoration-color: -moz-use-text-color;
+    -moz-text-decoration-line: none;
+    -moz-text-decoration-style: solid;
+}
+a {
+    color: #CC3300;
+    outline-color: -moz-use-text-color;
+    outline-style: none;
+    outline-width: 0;
+}
+.mt10 {
+    margin-top: 10px;
+}
+em{
+    font-size: 12px;
+    font-weight: normal;
+	font-style: normal;
+	color: #666666;
+}
+
+.cred {
+    color: #FF0000;
+}
+
+.choose_games_txt{
+    font-size: 12px;
+    font-weight: normal;
+	font-style: normal;
+	color: #666666;
+	float: left;
+}
+
+.pews {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #FFFFFF;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: #3399CC;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-right-color: #3399CC;
+    border-right-style: solid;
+    border-right-width: 1px;
+	border-left-color: #3399CC;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-top-color: #3399CC;
+    border-top-style: solid;
+    border-top-width: 1px;
+    color: #3399CC;
+    float: left;
+    height: 26px;
+    line-height: 26px;
+    margin-bottom: 5px;
+    margin-left: 0;
+    margin-right: 5px;
+    margin-top: 0;
+    text-align: center;
+    width: 96px;
+}
+
+.cf60{
+    color: #FF6600;
+}
+.mr5 {
+    margin-right: 5px;
+}
+.ml5 {
+    margin-left: 5px;
+}
+.ml10 {
+    margin-left: 40px;
+}
+
+.rightBox {
+    border-top-color: #D0ECF5;
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin-top: 80px;
+    padding-bottom: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+}

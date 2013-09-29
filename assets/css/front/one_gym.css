@@ -233,17 +233,30 @@ ul.nav-tabs li a{
  font-size: 16px;
  font-weight: bold;
 }
+
 .details_ticket dl{
  font-size: 14px;
  margin-right: 0px;
+}
+.details_ticket dt {
+ width: 70px;
+ margin-top: 10px;
+}
+
+.details_ticket dd {
+ margin-left: 80px;
+  margin-top: 10px;
+}
+.details_ticket {
+padding-left: 10px;
 }
 
 .intro span{
   color: #666666;
   margin-right: 20px;
 }
-.intro{
-  margin-top: 20px;
+.reserve_info{
+  margin-top: 40px;
 }
 
 .choose_head {
@@ -262,28 +275,60 @@ ul.nav-tabs li a{
 .opiPrice{
 	margin-left: 120px;
 }
-
-.opiPrice_body{
-	margin-left: 90px;
-}
-
-.opiPrice_body em{
-	-moz-text-decoration-line: line-through;
-}
 .opiInfo{
 	margin-left: 120px;
 }
 
-.opiInfo_body{
-	margin-left: 80px;
-}
 .opiAct{
 	margin-left: 120px;
 }
 
 .choose_body ul li{
-border-bottom-style: solid;
-border-bottom-color: #E4E4E4;
-border-bottom-width: 1px;
-padding-bottom: 9px;
+	border-bottom-style: solid;
+	border-bottom-color: #E4E4E4;
+	border-bottom-width: 1px;
+	padding-bottom: 9px;
 }
+
+.opiPrice_body{
+	margin-left: 90px;
+}
+.opiPrice_body em{
+	-moz-text-decoration-line: line-through;
+	margin-right: 5px;
+}
+.opiPrice_body b{
+	color: #3399CC;
+    font-size: 16px;
+    vertical-align: middle;
+}
+.opiInfo_body{
+	margin-left: 65px;
+}
+
+/*right info*/
+.right_info{
+margin-left: 24px;
+}
+
+.right_info h2{
+ font-family: 'Î¢ÈíÑÅºÚ','ËÎÌå';
+ font-size: 16px;
+ font-weight: bold;
+}
+
+.mt5 {margin-top: 5px;}
+
+.cSport {
+ color: #3399CC !important;
+}
+.more {
+    margin-left: 24px;
+}
+.hot_activity dt {
+ width: 100px;
+}
+.hot_activity dd {
+ margin-left: 106px;
+}
+.mr5 {margin-right: 5px;}
