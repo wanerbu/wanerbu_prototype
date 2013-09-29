@@ -1,0 +1,165 @@
+@charset "UTF-8";
+/* -----------------------------------------------------
+* 运动馆预订样式
+* ----------------------------------------------------- */
+
+.mt20 {margin-top: 20px;}
+.ml30 {margin-left: 30px;}
+.ml5 {margin-left: 5px;}
+.fs14 {font-size: 14px;}
+.fs16 {font-size: 16px;}
+.fs22 {font-size: 22px;}
+
+/*步骤导航栏样式*/
+ul li {
+    list-style-type: none;/*去掉ul/li前面的点*/
+}
+/*背景灰色显示*/
+.payOrderSteps {
+    background-color: #EEEEEE;
+    overflow-y: hidden;
+}
+.payOrderSteps li {
+    color: #999999;
+    float: left;/*li横向显示*/
+    font-size: 14px;
+    font-weight: bold;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    width: 25%;
+}
+.step1, .step2, .step3, .step4 {
+    text-indent: -8px;
+}
+.setp_active{
+ color: #3399CC !important;
+}
+
+.payBox_header {
+    border-bottom-color: #EBEBEB;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    height: 35px;
+}
+.payBox_header h2 {
+    font-family: '微软雅黑','宋体';
+    font-size: 14px;
+}
+.payBox_body {
+    border-top-color: #1885AE;
+    border-top-style: solid;
+    border-top-width: 2px;
+}
+.payBox_body_left {
+    float: left;
+    min-height: 230px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+.gym_info{
+    float: left;
+    margin-bottom: -30000px;
+    padding-bottom: 30000px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    width: 279px;
+	overflow-x: hidden;
+    overflow-y: hidden;
+}
+em {
+    font-style: normal;
+	color: #999999;
+}
+.payBox_body_left li {
+    line-height: 28px;
+}
+.payBox_body_left ol {
+    float: left;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    width: 400px;
+}
+
+.games .games_rev {
+float: left;
+	overflow-x: hidden;
+    overflow-y: hidden;
+}
+.changci {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: #3399CC;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-top-color: #3399CC;
+    border-top-style: solid;
+    border-top-width: 1px;
+	border-left-color: #3399CC;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #3399CC;
+    border-right-style: solid;
+    border-right-width: 1px;
+    color: #3399CC;
+    display: block;
+    height: 26px;
+    line-height: 26px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 10px;
+    margin-top: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0;
+    text-align: center;
+    width: 170px;
+}
+
+.price {
+    color: #FF6600;
+    font-size: 14px;
+}
+.changeMobile {
+    height: 30px;
+    line-height: 30px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+}
+.changeMobile {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #F3F3F3;
+	}
+label {
+    display: inline;
+    margin-bottom: 0;
+	font-size: 12px;
+}
+.limitTimedetail{
+ background-color: #F3FBFE;
+}
+
+.cf60, .yellow {
+    color: #FF6600;
+}
+.payBox_hd{
+float: left;
+}
+.payments{
+	background-color: #F8F8F8;
+}

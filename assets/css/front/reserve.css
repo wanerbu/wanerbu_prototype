@@ -2,43 +2,25 @@
 /* -----------------------------------------------------
 * 运动馆预订样式
 * ----------------------------------------------------- */
+.mt20 {margin-top: 20px;}
+.mr5 { margin-right: 5px;}
+.ml5 { margin-left: 5px;}
+.ml10{margin-left: 40px;}
+.fs14 {font-size: 14px;}
+.mt10 {margin-top: 10px;}
 
-/*步骤*/
+/*步骤导航栏样式*/
 ul li {
-    list-style-image: none;
-    list-style-position: outside;
-    list-style-type: none;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
+    list-style-type: none;/*去掉ul/li前面的点*/
 }
-
+/*背景灰色显示*/
 .payOrderSteps {
-    background-attachment: scroll;
-    background-clip: border-box;
     background-color: #EEEEEE;
-    background-image: none;
-    background-origin: padding-box;
-    background-position: 0 0;
-    background-repeat: repeat;
-    background-size: auto auto;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-    overflow-x: hidden;
     overflow-y: hidden;
-    width: 100%;
 }
-
 .payOrderSteps li {
     color: #999999;
-    float: left;
+    float: left;/*li横向显示*/
     font-size: 14px;
     font-weight: bold;
     height: 34px;
@@ -49,14 +31,11 @@ ul li {
 .step1, .step2, .step3, .step4 {
     text-indent: -8px;
 }
-
 .setp_active{
  color: #3399CC !important;
 }
-.mt20 {margin-top: 20px;}
 
 /*选场次信息*/
-
 .ui_left{
    border-top-color: #BEE5F2;
    border-top-style: solid;
@@ -188,9 +167,7 @@ background-color: #F1FBFF;
     width: 16.89%;
 	margin-left: 0.13%;
 }
-.fs14 {
-    font-size: 14px;
-}
+
 a, a:hover {
     -moz-text-blink: none;
     -moz-text-decoration-color: -moz-use-text-color;
@@ -202,9 +179,6 @@ a {
     outline-color: -moz-use-text-color;
     outline-style: none;
     outline-width: 0;
-}
-.mt10 {
-    margin-top: 10px;
 }
 em{
     font-size: 12px;
@@ -266,16 +240,6 @@ em{
 .cf60{
     color: #FF6600;
 }
-.mr5 {
-    margin-right: 5px;
-}
-.ml5 {
-    margin-left: 5px;
-}
-.ml10 {
-    margin-left: 40px;
-}
-
 .rightBox {
     border-top-color: #D0ECF5;
     border-top-style: solid;
