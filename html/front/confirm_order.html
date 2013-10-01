@@ -50,7 +50,7 @@
 				</div>
 			</div>
 			<div class="payBox_body">
-				<div class="payBox_body_left span10">
+				<div class="payBox_body_left">
 						<dl class="gym_info">
 							<ul>
 							<li><em>预定场馆：</em>虹桥临空SOHO羽毛球馆</li>
@@ -78,7 +78,7 @@
 							</li>
 						</ol>
 				</div>
-				<div class="payBox_body_right span2">
+				<div class="payBox_body_right">
 					<div class="limitTimedetail inner">
 						<p><span class="fs14 cf60">请在15分钟内完成付款</span>，超时系统将自动释放已选场次，支付中如遇到问题请致电：<b>4000-406-506</b></p>
 						<div class="limitTime">
@@ -102,6 +102,84 @@
 						<li><em>票券密码：</em><input type="text" class="span3"><button type="button" class="btn btn-primary ml5 mtv6">使用</button><li>
 						<li><p class="mt10"><span class="cred">* </span>说明：<span class="yellow">兑换类票券可以使用多张</span>，优惠类票券只能使用一张。</p></li>
 					</ul>
+				</dl>
+			</div>
+		</div>
+		
+		<div class="payList mt20 span12">
+			<div>
+				<ul class="nav nav-tabs">
+								<li class="active"> <a href="javascript:searchPPPV('booking', '');">网上支付</a></li>
+				</ul>
+			</div>
+			<div class="payMenu">
+				<dl class="clear">
+					<dt>银行支付：</dt>
+					<dd class="payway clear">
+					<label for="icon_jtyh" title="交通银行" class="icon_jtyh">
+					<input type="radio" value="directPay:COMM" id="icon_jtyh" name="paymethod">
+					</label>
+					<label for="icon_jsyh" title="中国建设银行" class="icon_jsyh ">
+					<input type="radio" value="unionPay:CCB" id="icon_jsyh" name="paymethod">
+					</label>
+					<label for="icon_pfyh" title="浦发银行" class="icon_pfyh ">
+					<input type="radio" value="spdPay" id="icon_pfyh" name="paymethod">
+					</label>
+					<label for="icon_gsyh" title="中国工商银行" class="icon_gsyh ">
+					<input type="radio" value="unionPay:ICBC" id="icon_gsyh" name="paymethod">
+					</label>
+					<label for="icon_nyyh" title="中国农业银行" class="icon_nyyh">
+					<input type="radio" value="unionPay:ABC" id="icon_nyyh" name="paymethod">
+					</label>
+					<label for="icon_gfyh" title="广东发展银行" class="icon_gfyh">
+					<input type="radio" value="gdbPay" id="icon_gfyh" name="paymethod">
+					</label>
+					<label for="icon_yz" title="邮政储蓄银行" class="icon_yz ">
+					<input type="radio" value="psbcPay:01" id="icon_yz" name="paymethod">
+					</label>
+					<label for="icon_zsyh" title="招商银行" class="icon_zsyh ">
+					<input type="radio" value="cmbPay" id="icon_zsyh" name="paymethod">
+					</label>
+					<label for="icon_xyyh" title="兴业银行" class="icon_xyyh ">
+					<input type="radio" value="unionPay:CIB" id="icon_xyyh" name="paymethod">
+					</label>
+					<label for="icon_gdyh" title="中国光大银行" class="icon_gdyh">
+					<input type="radio" value="unionPay:CEB" id="icon_gdyh" name="paymethod">
+					</label>
+					<!--
+					<label for="icon_zxyh" title="中信银行" class="icon_zxyh">
+					<input type="radio" value="unionPay:CNCB" id="icon_zxyh" name="paymethod">
+					</label>
+					<label for="icon_sfyh" title="深圳发展银行" class="icon_sfyh ">
+					<input type="radio" value="pnrPay:14" id="icon_sfyh" name="paymethod">
+					</label>
+					<label for="icon_msyh" title="中国民生银行" class="icon_msyh ">
+					<input type="radio" value="directPay:CMBC" id="icon_msyh" name="paymethod">
+					</label>
+					<label for="icon_payh" title="平安银行" class="icon_payh ">
+					<input type="radio" value="pnrPay:50" id="icon_payh" name="paymethod">
+					</label>
+					<label for="icon_hxyh" title="华夏银行" class="icon_hxyh">
+					<input type="radio" value="unionPay:HXB" id="icon_hxyh" name="paymethod">
+					</label>
+					<label for="icon_njyh" title="南京银行" class="icon_njyh">
+					<input type="radio" value="pnrPay:49" id="icon_njyh" name="paymethod">
+					</label>
+					<label for="icon_zhsyh" title="浙商银行" class="icon_zhsyh">
+					<input type="radio" value="pnrPay:53" id="icon_zhsyh" name="paymethod">
+					</label>
+					<label for="icon_hzyh" title="杭州银行" class="icon_hzyh ">
+					<input type="radio" value="hzbankPay:01" id="icon_hzyh" name="paymethod">
+					</label>
+					<label for="icon_shnsyh" title="上海农商银行" class="icon_shnsyh ">
+					<input type="radio" value="china2Pay:0001" id="icon_shnsyh" name="paymethod">
+					</label>
+					<label for="icon_jsuyh" title="江苏银行" class="icon_jsuyh">
+					<input type="radio" value="jsbChina" id="icon_jsuyh" name="paymethod">
+					</label>
+					<input type="radio" style="display:none;" checked="checked" value="pnrPay" id="pnrOther" name="paymethod">
+					-->
+					</dd>
 				</dl>
 			</div>
 		</div>

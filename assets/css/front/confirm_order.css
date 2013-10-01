@@ -51,7 +51,6 @@ ul li {
     border-top-color: #1885AE;
     border-top-style: solid;
     border-top-width: 2px;
-
 }
 .payBox_body_left{
     float: left;
@@ -69,7 +68,10 @@ ul li {
    border-bottom-style: solid;
    border-bottom-width: 1px;
 }
-
+.payBox_body_right{
+  width: 183px;
+  float: left;
+}
 .gym_info{
     float: left;
     margin-bottom: -30000px;
@@ -97,9 +99,6 @@ em {
     padding-right: 20px;
     padding-top: 15px;
     width: 400px;
-	   border-left-color: #BEE5F2;
-   border-left-style: solid;
-   border-left-width: 1px;
 }
 
 .games .games_rev {
@@ -177,4 +176,68 @@ float: left;
 }
 .payments{
 	background-color: #F8F8F8;
+}
+.row-fluid [class*="span"]{
+margin-left: 0;
+}
+
+/*Ö§¸¶·½Ê½*/
+.payway label {
+    background-image: url("../../img/icon_pay.png");
+    background-repeat: no-repeat;
+    border-bottom-color: #FFFFFF;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-top-color: #FFFFFF;
+    border-top-style: solid;
+    border-top-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 20px;
+    margin-top: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+.payway label {
+    width: 147px;
+}
+.payway label.icon_jtyh {
+    background-position: 30px -120px;
+}
+.payway label.icon_jsyh {
+    background-position: 30px -40px;
+}
+.payway label.icon_pfyh {
+    background-position: 30px -360px;
+}
+.payway label.icon_gsyh {
+    background-position: 30px 0;
+}
+.payway label.icon_nyyh {
+    background-position: 30px -240px;
+}
+.payway label.icon_gfyh {
+    background-position: 30px -160px;
+}
+.payway label.icon_yz {
+    background-position: 30px -1209px;
+}
+.payway label.icon_zsyh {
+    background-position: 30px -80px;
+}
+.payway label.icon_xyyh {
+    background-position: 30px -200px;
+}
+.payway label.icon_gdyh {
+    background-position: 30px -280px;
+}
+.payway label input {
+    left: 8px;
+    position: absolute;
+    top: 14px;
 }
