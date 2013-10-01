@@ -6,6 +6,7 @@
 .mt20 {margin-top: 20px;}
 .ml30 {margin-left: 30px;}
 .ml5 {margin-left: 5px;}
+.mtv6 {margin-top: -6px;};
 .fs14 {font-size: 14px;}
 .fs16 {font-size: 16px;}
 .fs22 {font-size: 22px;}
@@ -50,14 +51,25 @@ ul li {
     border-top-color: #1885AE;
     border-top-style: solid;
     border-top-width: 2px;
+
 }
-.payBox_body_left {
+.payBox_body_left{
     float: left;
     min-height: 230px;
     overflow-x: hidden;
     overflow-y: hidden;
     position: relative;
+   border-left-color: #BEE5F2;
+   border-left-style: solid;
+   border-left-width: 1px;
+   border-right-color: #BEE5F2;
+   border-right-style: solid;
+   border-right-width: 1px;
+   border-bottom-color: #BEE5F2;
+   border-bottom-style: solid;
+   border-bottom-width: 1px;
 }
+
 .gym_info{
     float: left;
     margin-bottom: -30000px;
@@ -85,6 +97,9 @@ em {
     padding-right: 20px;
     padding-top: 15px;
     width: 400px;
+	   border-left-color: #BEE5F2;
+   border-left-style: solid;
+   border-left-width: 1px;
 }
 
 .games .games_rev {
