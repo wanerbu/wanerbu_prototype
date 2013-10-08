@@ -23,6 +23,7 @@
 	    $(function(){
 	      $("#navbar").load("top_nav.html"); 
 	      $("#footer").load("footer.html"); 
+		  $("#login_modal").load("login_modal.html"); 
 	    });
     </script> 
    
@@ -89,13 +90,18 @@
 												<div class="pk_cols"><em>21:00</em></div>
 											</div>
 											<div class="pk_rows table_rows">
+												<!--引用login modal-->
+											    <div id="login_modal"></div>
 												<div class="pk_cols">
 													<span title="该场次已售出" class="sellSeat">
 													</span>
 												</div>
 												<div class="pk_cols">
-													<span title="12:00-13:00 1号场地 40元" class="hasSeat">
+												<!--使用login modal-->
+													<a href="#myModal" role="button"  data-toggle="modal">
+													<span title="12:00-13:00 1号场地 40元" class="hasSeat" >
 													</span>
+													</a>
 												</div>
 												<div class="pk_cols">
 													<span title="该场次已售出" class="sellSeat">
