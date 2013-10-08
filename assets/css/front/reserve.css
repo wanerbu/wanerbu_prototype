@@ -51,9 +51,10 @@ ul li {
    border-bottom-width: 1px;
 }
 .seatViewTitle {
-    height: 32px;
+/*  height: 32px;
     margin-bottom: 20px;
-    padding-bottom: 15px;
+    padding-bottom: 15px;*/
+	padding-bottom: 9px;
     padding-left: 0;
     padding-right: 0;
     padding-top: 15px;
@@ -249,4 +250,8 @@ em{
     padding-left: 0;
     padding-right: 0;
     padding-top: 15px;
+}
+
+.innder{
+ padding-left: 8px;
 }
