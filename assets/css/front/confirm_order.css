@@ -4,12 +4,14 @@
 * ----------------------------------------------------- */
 
 .mt20 {margin-top: 20px;}
+.mt5 {margin-top: 5px;}
 .ml30 {margin-left: 30px;}
 .ml5 {margin-left: 5px;}
 .mtv6 {margin-top: -6px;};
 .fs14 {font-size: 14px;}
 .fs16 {font-size: 16px;}
 .fs22 {font-size: 22px;}
+.fs20 {font-size: 20px;}
 
 /*步骤导航栏样式*/
 ul li {
@@ -166,6 +168,7 @@ label {
 }
 .limitTimedetail{
  background-color: #F3FBFE;
+  padding-left: 10px;
 }
 
 .cf60, .yellow {
