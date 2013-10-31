@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* -----------------------------------------------------
-* 运动馆首页列表样式
+* 运动项目首页列表样式
 * ----------------------------------------------------- */
 
 /*场馆标题样式*/
@@ -52,41 +52,6 @@ background-position: -12px 0;
 background-position: -38px 0;
 }
 
-/*评分数字样式*/
-.bigSubp {
-vertical-align: -4px;
-height: 30px;
-line-height: 30px;
-display: inline-block;
-}
-
-.bigSubp sub {
-font-size: 30px;
-}
-
-sub {
-font-size: 22px;
-font-size: 28px\9;
-font-style: italic;
-color: #f60;
-line-height: 24px;
-vertical-align: middle;
-margin-left: 10px;
-}
-
-.bigSubp sup {
-font-size: 20px;
-}
-
-sup {
-font-weight: normal;
-font-size: 16px;
-font-style: italic;
-color: #f60;
-line-height: 20px;
-vertical-align: top;
-margin-left: 2px;
-}
 
 /*我要评分/感兴趣样式*/
 .ratingsCount {
@@ -203,6 +168,12 @@ color: #333;
 font: 12px/22px "宋体";
 }
 
+.ui_pic {
+    margin-right: 15px;
+	margin-left: 10px;
+	float: left;
+}
+
 .itemTopic dl {
 margin-bottom: 10px;
 }
@@ -218,8 +189,11 @@ zoom: 1;
 float: left;
 color: #999;
 }
+.itemTopic b {
+    color: #1885AE;
+}
 
-.ui_map{
+.ui_vidio{
 margin-left: 45px;
 }
 
@@ -267,7 +241,7 @@ padding-left: 10px;
     width: 100%;
 }
 
-.opiTime{
+.opiName{
 	margin-left: 10px;
 }
 
@@ -290,7 +264,7 @@ padding-left: 10px;
 }
 
 .opiPrice_body{
-	margin-left: 90px;
+	margin-left: 68px;
 }
 .opiPrice_body em{
 	-moz-text-decoration-line: line-through;

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>玩儿不 羽毛球</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="玩儿不">
+    <meta name="author" content="wanerbu">
+
+    <link href="../../plugins/bootstrap/css/bootstrap.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/formtastic.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/wanerbu_formtastic.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/common.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/front/front.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/front/top_nav.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/front/one_sport.css" media="all" rel="stylesheet" type="text/css" />
+
+	<script src="../../plugins/jquery/js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="../../plugins/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+	
+	<script>
+		// 导入外部文件部分
+	    $(function(){
+	      $("#navbar").load("top_nav.html"); 
+	      $("#footer").load("footer.html"); 
+	    });
+    </script> 
+   
+</head>
+
+  <body>
+  	<!-- 导航部分 -->
+    <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    </div>
+  
+    <div id="main-content" class="container">
+      <div class="row-fluid">
+	  	<div class="detail_head">
+			<div class="detailPa">
+			   <div class="detailName clear">
+					<h1 class="left">羽毛球</h1>		
+					 <div class="ratingsCount left">
+						<ul>
+							<li>
+								<span><a href="javascript:addCollection();" class="ad" id="nCollect">感兴趣</a></span>
+								<span><a href="javascript:cancelTreasure();" class="ad se none" id="hCollect">取消感兴趣</a></span>
+							</li>
+						</ul>
+					</div>
+			   </div><!--detailName-->
+			</div><!--detailPa-->
+         </div><!--detail head-->
+		 <div class="itemTopic">
+			<div class='ui_media span3'>
+				<div class="ui_pic">
+					<img width="200" height="300" title="羽毛球" src="../../assets/img/yumaoqiu.jpg">
+				</div>
+            </div><!-- /.ui_media-->
+			<div class='ui_text span5'>
+				 <p class="ui_summary_big">
+				    <span class="first"></span>
+					打羽毛球是一项全身的运动。长期进行羽毛球锻炼，可加快全身血液循环，增强了心血管系统和呼吸系统的功能。 
+					<a class="ffst cSport ml5" target="_blank" style="display:inline-block;" href="/news/47602086">详情&gt;&gt;</a>														<span></span>
+				  </p>
+							<dl class="mt20">
+								<dt>爆发力指数：</dt>
+								<dd><b>10</b></dd>
+							</dl>
+							<dl>
+								<dt>男女喜好比例:</dt>
+								<dd><b>5 : 5</b></dd>
+							</dl>
+							<dl>
+								<dt>耐力指数：</dt>
+								<dd><b>10</b></dd>
+							</dl>
+			</div><!--ui_text-->
+
+			<div class='ui_vidio'>
+				<div class='vidioInfo'>
+					Here will show vidio info for sport Badminton
+				</div>
+			</div>
+
+         </div><!--itemTopic-->
+      </div><!-- /.row-fluid -->
+	  <div class="row-fluid details">
+		<div class="span8 details_left">
+			<div>
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="javascript:searchPPPV('booking', '');">羽毛球场馆</a></li>
+				</ul>
+			</div>
+			<div class="reserve_content">
+				<div class="sub-content row-fluid">
+					<ul id="hotarea" class="nav nav-pills">
+						<li class="active"><a data-toggle="tab" href="#yanta">雁塔区</a></li>
+						<li class=""><a data-toggle="tab" href="#gaoxin">高新区</a></li>
+					</ul>
+					<div class="choose_head">
+						<span class="opiName">场馆名称</span>
+						<span class="opiPrice">价格(元)</span>
+						<span class="opiInfo">支持</span>
+						<span class="opiAct">操作</span>
+					</div>
+					<div class="tab-content">
+						 <div id="yanta" class="tab-pane active">			
+							<div class="choose_body">
+								<ul>
+									<li>
+										<span class="opiName">
+											<a href="#">张江体育休闲中心</a>
+										</span>
+										<span class="opiPrice_body">
+											<em>(35-75)</em><b>30-50</b>
+										</span>
+										<span class="opiInfo_body">
+											<em class="q" title="支持票券抵值">券</em>				
+											<em class="y" title="支持支付优惠">惠</em>			
+										</span>
+										<span class="opiAct">
+											<button class="btn btn-primary" type="button" >在线预订</button>
+										</span>
+									</li>
+									<li>
+										<span class="opiName">
+											<a href="#">高新体育休闲中心</a>
+										</span>
+										<span class="opiPrice_body">
+											<em>(35-75)</em><b>30-50</b>
+										</span>
+										<span class="opiInfo_body">
+											<em class="q" title="支持票券抵值">券</em>				
+											<em class="y" title="支持支付优惠">惠</em>			
+										</span>
+										<span class="opiAct">
+											<button class="btn btn-primary" type="button" >在线预订</button>
+										</span>
+									</li>
+								 </ul>
+							</div> 							
+						</div><!--yanta--> 
+						 <div id="gaoxin" class="tab-pane">			
+							<div class="choose_body">
+								<ul>
+									<li>
+										<span class="opiName">
+											<a href="#">浦东体育休闲中心</a>
+										</span>
+										<span class="opiPrice_body">
+											<em>(35-75)</em><b>30-50</b>
+										</span>
+										<span class="opiInfo_body">
+											<em class="q" title="支持票券抵值">券</em>				
+											<em class="y" title="支持支付优惠">惠</em>			
+										</span>
+										<span class="opiAct">
+											<button class="btn btn-primary" type="button" >在线预订</button>
+										</span>
+									</li>
+								 </ul>
+							</div> 							
+						</div><!--gaoxin-->  						
+					</div>
+				</div>
+			
+			</div>
+		</div>
+		<div class="details_right span4">
+			<div class="right_info">
+				<div><h2>运动优惠</h2></div>
+				<div>
+					<ul>
+					<li class="mt5">
+						<span class="cSport">农行信用卡银联在线支付</span>每笔订单立减<b class="cSport">10</b>元
+					</li>
+					<li class="mt5">
+						<span class="cSport">银联在线支付</span>每笔订单立减<b class="cSport">5</b>元, 立返<b>5</b>元券
+					</li>
+					</ul>
+				</div>
+				<div>
+					<h2>运动活动</h2>
+					<a target="_blank" class="more cSport" href="/activity/activityList.xhtml?tag=sg">更多>></a>
+				</div>
+				<div class="hot_activity">
+					<ul>
+						<li>
+						<dl class="dl-horizontal">
+							<dt class="act_pic">
+								<a target="_blank" title="玩儿不@运动 9元抢场 第二十期10月1日场" href="/activity/8179742">
+								<img width="96" height="128" alt="玩儿不@运动 9元抢场 第二十期10月1日场" src="../../assets/img/act.jpg">
+								</a>
+							</dt>
+							<dd class="act_txt">
+								<span title="玩儿不官方认证活动" class="mr5"></span>
+								<a target="_blank" title="玩儿不@运动 9元抢场 第二十期10月1日场" href="/activity/8179742" class="cSport">玩儿不@运动 9元抢场 第二十期10月1日场</a>
+								<p class="mt10">5月21日--12月31日</p>
+								<p class="mt10">玩儿不运动</p>
+							</dd>
+						</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	  </div>
+    </div><!--/.container-->
+    <!-- 底部footer -->
+    <footer id="footer">
+    </footer>
+  </body>
+</html>
