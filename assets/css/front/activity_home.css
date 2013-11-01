@@ -1,0 +1,177 @@
+@charset "UTF-8";
+/* -----------------------------------------------------
+* 活动首页列表样式
+* ----------------------------------------------------- */
+ul li{
+	list-style-type: none;
+	margin-top:10px
+}
+.activity_title {
+    position: relative;
+}
+.activity_title h1 {
+    font-family: "微软雅黑","黑体",Arial;
+    font-size: 26px;
+	display: inline;
+}
+.activity_title label {
+    margin-left: 20px;
+	display: inline;
+}
+.activity_title label b {
+    color: #CC3300;
+    font-size: 18px;
+}
+.more {
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.top_body ul li{
+	margin-top:10px
+}
+.headName {
+    font-family: '微软雅黑','宋体';
+    font-size: 16px;
+    font-weight: bold;
+}
+.topKey {
+    margin-left:115px
+}
+.num .point{
+	float: left;
+}
+.num {
+	font-size: 28px;
+	font-style: italic;
+}
+.winner {
+	 color: #FF6600;
+}
+.point {
+    color: #999999;
+    position: absolute;
+    right: 221px;
+	margin-top: 6px;
+}
+
+.mt10{margin-top:10px}
+.mb15{margin-bottom:15px}
+.ml15{ margin-left: 15px;}
+.ml10{ margin-left: 10px;}
+
+/*列表样式*/
+.dl-horizontal dd { margin-left: 80px;}
+dt,dd {line-height: 30px;}
+
+.ulist{margin-bottom:30px;font:12px/22px}
+.ulist li{line-height:24px;padding:3px 0 5px 0; list-style:none; margin:0px} 
+.ulist li a{white-space:nowrap}
+
+/*列表中标题样式*/
+.typeTitle{color:#999;position:absolute;left:0;top:0;line-height:24px}
+.dlTy{padding-left:0px;position:relative}
+
+.selectedMenus {
+    background-color: #F4F4F4;
+    height: 28px;
+    line-height: 28px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.right {
+    float: right;
+}
+.left {
+    float: left;
+}
+
+.choseBar {
+    height: 28px;
+    line-height: 28px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.choseBar dd { margin-left: 46px; margin-top: -4px;}
+
+.acList ul li {
+    display: inline;
+    float: left;
+    margin-bottom: 20px;
+    margin-top: 0;
+    width: 220px;
+}
+
+.ui_panel{
+	width: 218px;
+	height:346px;
+	border-style: solid;
+	border-width: 1px;	
+	border-color: #D2D2D2;
+}
+.panelml{
+	margin-left: 15px;
+}
+.panel_inner{
+    padding-bottom: 14px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 14px;
+    position: relative;
+}
+.center {
+text-align: center;
+}
+.acList h3 {
+    display: block;
+    font-weight: normal;
+    height: 48px;
+    line-height: 24px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.mt10 {
+    margin-top: 10px;
+}
+.fs12 {
+    font-size: 12px;
+}
+.c999 {
+    color: #999999 !important;
+}
+.isBusiness, .isOfficial, .approved, .unApprove{
+    background-attachment: scroll;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("../../img/ico_activity.png");
+    background-repeat: no-repeat;
+}
+.isBusiness, .isOfficial, .approved, .unApprove {
+    display: inline-block;
+    height: 19px;
+    margin-left: 2px;
+    vertical-align: -4px;
+    width: 30px;
+}
+.unApprove {
+    background-position: 0 -1051px;
+}
+.acBtm {
+	height:40px;
+	background-color: #F4F4F4;
+}
+.acPrice {
+    float: left;
+    line-height: 40px;
+    color: #FF6600;
+    font-size: 18px;
+    font-weight: bold;
+}
+.acBtm p {
+    text-align: right;
+}
