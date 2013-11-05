@@ -14,14 +14,18 @@
 	<link href="../../assets/css/front/front.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="../../assets/css/front/top_nav.css" media="all" rel="stylesheet" type="text/css" />
     <link href="../../assets/css/front/one_activity.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/front/bootstrap-datetimepicker.min.css" media="all" rel="stylesheet" type="text/css" />
 	
 	<script src="../../plugins/jquery/js/jquery-1.10.2.js" type="text/javascript"></script>
 	<script src="../../plugins/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+	<script src="../../assets/js/front/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+
 	<script>
 		// 导入外部文件部分
 	    $(function(){
 	      $("#navbar").load("top_nav.html"); 
 	      $("#footer").load("footer.html"); 
+		  $("#new_activity_modal").load("new_activity_modal.html"); 
 	    });
     </script> 
 </head>
@@ -35,7 +39,11 @@
       <div class="row-fluid">
 		<div class="activity_title">
 			<div class="crumbs"><a href="/">玩儿不网</a>&nbsp;&gt;&nbsp;<a href="/activity/">活动</a>&nbsp;&gt;&nbsp;活动详情
+			<!--引用new_activity_modal-->
+	        <div id="new_activity_modal"></div>
+			<a href="#newActivityModal" role="button"  data-toggle="modal">
 			<button type="button" class="btn btn-info more">发起新活动</button>
+			</a>
 		</div>
 	  </div><!-- /.row-fluid -->  
 	  <div class='row-fluid mt20'>

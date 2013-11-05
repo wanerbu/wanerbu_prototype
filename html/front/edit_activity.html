@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>玩儿不 编辑活动</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="玩儿不">
+    <meta name="author" content="wanerbu">
+
+    <link href="../../plugins/bootstrap/css/bootstrap.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/formtastic.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/wanerbu_formtastic.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/common.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/front/front.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/front/top_nav.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="../../assets/css/front/edit_activity.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/front/bootstrap-datetimepicker.min.css" media="all" rel="stylesheet" type="text/css" />
+	
+	<script src="../../plugins/jquery/js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="../../plugins/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+	<script src="../../assets/js/front/bootstrap-wysiwyg.js" type="text/javascript"></script>
+    <script src="../../assets/js/front/jquery.hotkeys.js" type="text/javascript"></script>
+	<script src="../../assets/js/front/initToolbar.js" type="text/javascript"></script>
+	<script src="../../assets/js/front/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+	
+
+	<script>
+		// 导入外部文件部分
+	    $(function(){
+	      $("#navbar").load("top_nav.html"); 
+	      $("#footer").load("footer.html"); 
+	    });
+    </script> 
+</head>
+
+  <body>
+  	<!-- 导航部分 -->
+    <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    </div>
+  
+    <div id="main-content" class="container">
+      <div class="row-fluid">
+		<div class="activity_title">
+			<div class="crumbs"><a href="/">玩儿不网</a>&nbsp;&gt;&nbsp;<a href="/activity/">活动</a>&nbsp;&gt;&nbsp;编辑活动
+		</div>
+	  </div><!-- /.row-fluid -->  
+	  <div class='row-fluid mt20'>
+		<div class='acBox'>
+			<div class='acInner'>
+				<div class='ui_left span8'>
+					<div class='acHeaderBtm'>
+						<div class='ui_abeam'>
+							<div class='uipic'>
+								<img id="showUpLoad" src="../../assets/img/d_other.jpg">
+								<div class="bds_tools mt10">
+									<button type="button" class="btn btn-info more">上传图片</button>
+								</div>
+								<div class="center mt10">
+								<p class="c999">最佳尺寸：150*200</p>
+								</div>
+							</div>
+							<div class='uitext'>
+								<dl class="activityInfo">
+									<dt>活动名称：</dt>
+									<dd>宝南路88号羽毛球大赛<span even="edit" class="acEdit" title="" placeholder="编辑活动名称"></span></dd>
+									<dt>活动时间：</dt>
+									<dd>
+									   <div class="showForm"">	
+										10月31日 周四 20:00&nbsp;--&nbsp; 
+										<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										12月30日 周一 19:10 <span even="edit" class="acEdit" title="" plugs-tips="编辑活动时间"></span></p>
+									   </div>	
+									</dd>
+									<dt>报名时间：</dt>
+									<dd>
+									   <div class="editForm">	
+										  <div id="datetimepicker1" class="input-append date" style="margin-bottom:15px">
+											<input data-format="dd/MM/yyyy hh:mm:ss" type="text" placeholder="设置开始时间..." style="width: 138px;"></input>
+											<span class="add-on">
+											  <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+											  </i>
+											</span>
+										  </div>				  
+										  <div id="datetimepicker2" class="input-append date ml64">
+											<input data-format="dd/MM/yyyy hh:mm:ss" type="text" placeholder="设置结束时间..." style="width: 138px;"></input>
+											<span class="add-on">
+											  <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+											  </i>
+											</span>
+										  </div>
+										  <script type="text/javascript">
+										  $(function() {
+											$('#datetimepicker1').datetimepicker({
+											  language: 'pt-BR'
+											});
+											$('#datetimepicker2').datetimepicker({
+											  language: 'pt-BR'
+											});
+										  });
+										  </script>
+									   </div>
+									</dd>
+									<dt>活动地点：</dt>
+									<dd>宝南路88号(近七宝老街) <span even="edit" class="acEdit" title="" plugs-tips="编辑活动地点"></span></dd>
+									<dt>活动类型：</dt>
+									<dd>运动</dd>
+									<dt>人数限制：</dt>
+									<dd><input type="text" id="inputEmail" style="width: 68px">人<span class="ml10 c999 fs12">留空或为0表示不限人数</span></dd>
+									<dt style=" margin-left: 12px">联系人：</dt>
+									<dd><input type="text" id="inputEmail" style="width: 100px"></dd>
+									<dt>联系方式：</dt>
+									<dd><input type="text" id="inputEmail" style="width: 100px"></dd>
+									<dt style=" margin-left: 30px">QQ：</dt>
+									<dd><input type="text" id="inputEmail" style="width: 100px"></dd>
+									<dt>活动费用：</dt>
+									<dd><input type="text" id="inputEmail" style="width: 68px">元<span class="ml10 c999 fs12">填0或不填表示免费</span></dd>
+								</dl>
+							</div><!--uitext-->
+						</div><!--ui_abeam-->
+					</div><!--acHeaderBtm-->
+				</div><!--ui_left-->
+				<div class='ui_right span4'>
+					<div class='kuang'>
+						<div class="mod_hd">
+							<h2>组织者</h2>
+						</div>
+						<div class="mod_bd">
+							<div class="ui_abeam">
+								<div class="uipic">
+									<a target="_blank" href="#" title="伞下晴空99">
+									<img width="50" height="50" src="../../assets/img/default_head.png" alt="伞下晴空99">
+									</a>
+								</div>
+								<div class="uitext">
+									<p class="CC3300">伞下晴空99
+										<span class="unApprove" title="未认证"></span>
+									</p>
+								</div>
+							</div><!--ui_abeam-->
+						</div><!--mod_bd-->
+					</div><!--kuang-->
+				</div><!--ui_right-->
+			</div>
+		</div><!--acBox-->
+	  </div><!-- /.row-fluid -->  
+	  <div class='row-fluid mt20'>
+	  		<div class="title_details">
+						<div><h2>活动详情</h2></div>
+						<div id="alerts"></div>
+						<div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
+
+						  <div class="btn-group">
+							<a class="btn dropdown-toggle" data-toggle="dropdown" title="Font"><i class="icon-font"></i><b class="caret"></b></a>
+							  <ul class="dropdown-menu">
+							  </ul>
+						  </div>
+						  <div class="btn-group">
+							<a class="btn dropdown-toggle" data-toggle="dropdown" title="Font Size"><i class="icon-text-height"></i>&nbsp;<b class="caret"></b></a>
+							  <ul class="dropdown-menu">
+							  <li><a data-edit="fontSize 5"><font size="5">Huge</font></a></li>
+							  <li><a data-edit="fontSize 3"><font size="3">Normal</font></a></li>
+							  <li><a data-edit="fontSize 1"><font size="1">Small</font></a></li>
+							  </ul>
+						  </div>
+						  <div class="btn-group">
+							<a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="icon-bold"></i></a>
+							<a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="icon-italic"></i></a>
+							<a class="btn" data-edit="strikethrough" title="Strikethrough"><i class="icon-strikethrough"></i></a>
+							<a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="icon-underline"></i></a>
+						  </div>
+						  <div class="btn-group">
+							<a class="btn" data-edit="insertunorderedlist" title="Bullet list"><i class="icon-list-ul"></i></a>
+							<a class="btn" data-edit="insertorderedlist" title="Number list"><i class="icon-list-ol"></i></a>
+							<a class="btn" data-edit="outdent" title="Reduce indent (Shift+Tab)"><i class="icon-indent-left"></i></a>
+							<a class="btn" data-edit="indent" title="Indent (Tab)"><i class="icon-indent-right"></i></a>
+						  </div>
+						</div>
+					    <div class="btn-group">
+							<a class="btn" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="icon-align-left"></i></a>
+							<a class="btn" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="icon-align-center"></i></a>
+							<a class="btn" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="icon-align-right"></i></a>
+							<a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="icon-align-justify"></i></a>
+					    </div>
+					    <div class="btn-group">
+							  <a class="btn dropdown-toggle" data-toggle="dropdown" title="Hyperlink"><i class="icon-link"></i></a>
+							  <div class="dropdown-menu input-append">
+									<input class="span2" placeholder="URL" type="text" data-edit="createLink"/>
+									<button class="btn" type="button">Add</button>
+							</div>
+							<a class="btn" data-edit="unlink" title="Remove Hyperlink"><i class="icon-cut"></i></a>
+					    </div>
+					    <div class="btn-group">
+							<a class="btn" title="Insert picture (or just drag & drop)" id="pictureBtn"><i class="icon-picture"></i></a>
+							<input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" />
+					   </div>
+					   <div class="btn-group">
+							<a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="icon-undo"></i></a>
+							<a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="icon-repeat"></i></a>
+					   </div>
+					   <input type="text" data-edit="inserttext" id="voiceBtn" x-webkit-speech="">
+					</div>
+					<div id="editor">
+					</div>
+				</div>
+			</div><!--details-->
+			<div class="mt20" style="text-align: center;">
+				<button class="btn btn-info">发布活动</button>
+			</div>
+	  </div><!-- /.row-fluid -->  
+    </div><!--/.container-->
+    
+    <!-- 底部footer -->
+    <footer id="footer">
+    </footer>
+
+  </body>
+</html>
+

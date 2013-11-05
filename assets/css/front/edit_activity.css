@@ -1,0 +1,139 @@
+@charset "UTF-8";
+/* -----------------------------------------------------
+* 活动首页列表样式
+* ----------------------------------------------------- */
+
+.mr20{ margin-right: 20px;}
+.mt10{margin-top:10px}
+.mt20{margin-top:20px}
+.mb15{margin-bottom:15px}
+.ml15{ margin-left: 15px;}
+.ml10{ margin-left: 10px;}
+.mr5{ margin-right: 5px;}
+.ml5 { margin-left: 5px;}
+.ml64 {margin-left: 64px;}
+
+.fs20{font-size: 20px;}
+.CC3300{color: #CC3300 !important;}
+.c333 {
+    color: #333333 !important;
+}
+ul li{
+	list-style-type: none;
+	margin-top:10px
+}
+.uipic,.uitext {
+	float: left;
+}
+.uipic {
+	margin-right: 30px;
+}
+.kuang {
+    border-color: #DDDDDD;
+    border-style: solid;
+	border-width: 1px;
+	padding:15px;
+	margin-bottom: 20px;
+	height:100px;
+}
+.bds_tools {
+	text-align: center;
+}
+.c999 {
+    color: #999999 !important;
+}
+.center {
+   text-align: center;
+}
+
+/**文字列表样式**/
+.acHeaderBtm dl dt {
+    float: left;
+    font-weight: bold;
+    height: 30px;
+    text-align: right;
+}
+
+.acHeaderBtm dl dd {
+    width: 440px;
+}
+
+/*列表样式*/
+dt,dd {line-height: 30px;}
+
+.acPrice {
+    color: #FF6600;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cF60 {
+    color: #FF6600;
+}
+
+.title_ft {
+ font-size: 18px;
+}
+
+h2 {
+    font-family: '微软雅黑','宋体';
+    font-size: 16px;
+    font-weight: bold;
+}
+.isBusiness, .isOfficial, .approved, .unApprove,.acEdit{
+    background-attachment: scroll;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("../../img/ico_activity.png");
+    background-repeat: no-repeat;
+}
+.isBusiness, .isOfficial, .approved, .unApprove {
+    display: inline-block;
+    height: 19px;
+    margin-left: 2px;
+    vertical-align: -4px;
+    width: 30px;
+}
+.unApprove {
+    background-position: 0 -1051px;
+}
+
+
+
+#editor {
+	max-height: 250px;
+	height: 250px;
+	background-color: white;
+	border-collapse: separate; 
+	border: 1px solid rgb(204, 204, 204); 
+	padding: 4px; 
+	overflow: scroll;
+	outline: none;
+}
+.dropdown-menu a {
+  cursor: pointer;
+}
+
+.btn-toolbar {
+    float: left;
+    margin-top: 0;
+	margin-bottom: 0;
+	font-size: 0;
+}
+.btn-group{
+    margin-left: 0px;
+}
+.input-append .span2 {
+    width: 73.894%;
+}
+.input-append
+{
+min-width: 222px;
+}
+
+.acEdit {
+	background-position: 4px -1130px;
+	cursor: pointer;
+    display: inline-block;
+    height: 20px;
+	width: 20px;
+}
