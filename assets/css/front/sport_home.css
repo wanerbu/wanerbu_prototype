@@ -5,12 +5,29 @@
 
 .mt10{margin-top:10px}
 .mb15{margin-bottom:15px}
+.hotcmt{margin-top:20px}
+.ml20 {
+    margin-left: 20px !important;
+}
+.c999 {
+    color: #999999 !important;
+}
+.title{
+font-size: 16px;
+}
+
+/*列表样式*/
+ul li {
+list-style: none;
+padding: 0;
+margin: 0;
+}
 
 /*列表样式*/
 .dl-horizontal dd { margin-left: 80px;}
-dt,dd {line-height: 30px;}
+dt,dd {line-height: 25px;}
 
-.ulist{margin-bottom:30px;font:12px/22px}
+.ulist{margin-bottom:20px;font:12px/22px}
 .ulist li{line-height:24px;padding:3px 0 5px 0; list-style:none; margin:0px} 
 .ulist li a{white-space:nowrap}
 
@@ -26,6 +43,7 @@ dt,dd {line-height: 30px;}
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
+	margin-bottom: 20px;
 }
 
 .right {
@@ -41,18 +59,9 @@ dt,dd {line-height: 30px;}
 /*左侧运动项目图片样式*/
 .sportItemsBox {
     background-color: #F4FCFF;
-    border-bottom-color: #D5F3FF;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-top-color: #D5F3FF;
-    border-top-style: solid;
-    border-top-width: 1px;
-	border-left-color: #D5F3FF;
-    border-left-style: solid;
-    border-left-width: 1px;
-    border-right-color: #D5F3FF;
-    border-right-style: solid;
-    border-right-width: 1px;
+	border-color:#D5F3FF;
+	border-style: solid;
+    border-width: 1px;
     display: block;
     height: 144px;
     margin-bottom: 0;
@@ -67,23 +76,10 @@ dt,dd {line-height: 30px;}
     width: 100px;
 }
 .sportItemsBox em {
-    background-attachment: scroll;
-    background-clip: border-box;
-    background-color: transparent;
     background-image: url("../../img/sport_items.gif");
-    background-origin: padding-box;
-    background-repeat: no-repeat;
-    background-size: auto auto;
     display: block;
     height: 100px;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
     text-indent: -9999px;
-    width: 100px;
 }
 .mt20 {
     margin-top: 20px !important;
@@ -107,6 +103,22 @@ dt,dd {line-height: 30px;}
 
 .text_info b{
   color: #1885AE;
+}
+
+/*右侧热门活动*/
+
+.ui_right h2{
+ font-family: '微软雅黑','宋体';
+ font-size: 16px;
+ font-weight: bold;
+ display: inline;
+}
+
+.hot_activity dt {
+ width: 100px;
+}
+.hot_activity dd {
+ margin-left: 106px;
 }
 
 /*分页样式*/

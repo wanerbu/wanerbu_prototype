@@ -32,53 +32,57 @@
     </div>
   
     <div id="main-content" class="container">
-      <div class="row-fluid">
-		<ul class = "ulist">
-		<li>
-				<strong>运动项目</strong>
-		</li>
-		<li>
-			<div class="condition">
-				<dl class="dl-horizontal dlTy">
-					<dt>
-						<span class="typeTitle left">名称查询</span>
-					</dt>
-					<dd>
-					<div>
-						<form class="form-search">
-						  <input type="text" class="input-medium search-query" placeholder="请输入搜索关键词">
-						  <button type="submit" class="btn">查询</button>
-						</form>
-					</div>	
-					</dd>
-				</dl>
-			</div>
-		</li>
-		</ul>
-	  </div>
       <div class='row-fluid' style='background-color:white; margin-top:0px;'>
-        <div class='span12'>
-					<div class="mb15">
-						<div class="selectedMenus">
-							<div class="right">
-							  <div class="btn-group">
-								<button class="btn">默认(优先展示可预订项目)</button>
-								<button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-								<ul class="dropdown-menu">
-								  <li><a href="#">默认(优先展示可预订项目)</a></li>
-								  <li><a href="#">按关注度(由高到低)</a></li>
-								</ul>
-							  </div>
-							</div>
-							<div class="left">
-								<span>
-									共<b class="cSport">26</b>个运动项目
+        <div class='span8 ui_left'>
+		  <div class="tile_condition">
+			<ul class = "ulist">
+			<li>
+					<strong class="title">运动项目</strong>
+			</li>
+			<li>
+				<div class="condition">
+					<dl class="dl-horizontal dlTy">
+						<dt>
+							<span class="typeTitle left">名称查询</span>
+						</dt>
+						<dd>
+							<div>
+								<form class="form-search" style="display: inline;">
+								  <input type="text" class="input-medium search-query" placeholder="请输入搜索关键词">
+								  <button type="submit" class="btn">查询</button>
+								</form>
+								<span class="ml20 c999 searchHot">热门搜索：
+									<a class="c999" href="javascript:hotSearchItem('羽毛球');">羽毛球</a>
+									<span class="ml5 mr5">|</span>											
+									<a class="c999" href="javascript:hotSearchItem('足球');">乒乓球</a> 
+									<span class="ml5 mr5">|</span>											
+									<a class="c999" href="javascript:hotSearchItem('游泳');">篮球</a> 
 								</span>
 							</div>
-						</div>
-					</div>
-        </div>
-		<div class="sportList" id="gymListArea">
+						</dd>
+					</dl>
+				</div>
+			</li>
+			</ul>
+		  </div><!--tile_condition-->
+		  <div class="selectedMenus">
+			<div class="right">
+				<div class="btn-group">
+					<button class="btn">默认(优先展示可预订项目)</button>
+					<button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li><a href="#">默认(优先展示可预订项目)</a></li>
+						<li><a href="#">按关注度(由高到低)</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="left">
+				<span>
+				共<b class="cSport">26</b>个运动项目
+				</span>
+			</div>
+		  </div><!--selectedMenus-->
+          <div class="sportList" id="gymListArea">
 			<ul>
 			   <li class="effectLi sportList" style="width:100%; position:static;">
 					<div class="ui_media">
@@ -127,17 +131,76 @@
 					 </div>
 			    </li>
 		    </ul>
+		  </div><!--sportList-->
+        </div><!--ui_left-->
+		<div class="span4 ui_right">
+				<div>
+					<h2>热门活动</h2>
+					<a target="_blank" class="more cSport" href="/activity/activityList.xhtml?tag=sg">更多>></a>
+				</div>
+				<div class="hot_activity">
+					<ul>
+						<li>
+							<dl class="dl-horizontal">
+								<dt class="act_pic">
+									<a target="_blank" title="玩儿不@运动 9元抢场 第二十期10月1日场" href="/activity/8179742">
+									<img width="96" height="128" alt="玩儿不@运动 9元抢场 第二十期10月1日场" src="../../assets/img/act.jpg">
+									</a>
+								</dt>
+								<dd class="act_txt">
+									<span title="玩儿不官方认证活动" class="mr5"></span>
+									<a target="_blank" title="玩儿不@运动 9元抢场 第二十期10月1日场" href="/activity/8179742" class="cSport">玩儿不@运动 9元抢场 第二十期10月1日场</a>
+									<p class="mt10">5月21日--12月31日</p>
+									<p class="mt10">玩儿不运动</p>
+								</dd>
+							</dl>
+						</li>
+						<li class="hotcmt">
+							<dl class="dl-horizontal">
+								<dt class="act_pic">
+									<a target="_blank" title="玩儿不@运动 9元抢场 第二十期10月1日场" href="/activity/8179742">
+									<img width="96" height="128" alt="玩儿不@运动 9元抢场 第二十期10月1日场" src="../../assets/img/act.jpg">
+									</a>
+								</dt>
+								<dd class="act_txt">
+									<span title="玩儿不官方认证活动" class="mr5"></span>
+									<a target="_blank" title="玩儿不@运动 9元抢场 第二十期10月1日场" href="/activity/8179742" class="cSport">玩儿不@运动 9元抢场 第二十期10月1日场</a>
+									<p class="mt10">5月21日--12月31日</p>
+									<p class="mt10">玩儿不运动</p>
+								</dd>
+							</dl>
+						</li>
+						<li class="hotcmt">
+							<dl class="dl-horizontal">
+								<dt class="act_pic">
+									<a target="_blank" title="玩儿不@运动 9元抢场 第二十期10月1日场" href="/activity/8179742">
+									<img width="96" height="128" alt="玩儿不@运动 9元抢场 第二十期10月1日场" src="../../assets/img/act.jpg">
+									</a>
+								</dt>
+								<dd class="act_txt">
+									<span title="玩儿不官方认证活动" class="mr5"></span>
+									<a target="_blank" title="玩儿不@运动 9元抢场 第二十期10月1日场" href="/activity/8179742" class="cSport">玩儿不@运动 9元抢场 第二十期10月1日场</a>
+									<p class="mt10">5月21日--12月31日</p>
+									<p class="mt10">玩儿不运动</p>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div><!--hot_activity--->
+		</div><!--ui_right-->
+      </div><!-- /.row-fluid -->
+	  <div class='row-fluid'>
 			<div class="page">
 				<div id='page'>
-										    <a href="/sport/sportList.xhtml?servicetype=288731"  class='on' ><span>1</span></a>
-											<a href="/sport/sportList.xhtml?pageNo=1&servicetype=288731" ><span>2</span></a>
-											<a href="/sport/sportList.xhtml?pageNo=2&servicetype=288731" ><span>3</span></a>
-											<a href="/sport/sportList.xhtml?pageNo=3&servicetype=288731" ><span>4</span></a>
-											<a href="/sport/sportList.xhtml?pageNo=4&servicetype=288731" ><span>5</span></a>
-											<a href="/sport/sportList.xhtml?pageNo=5&servicetype=288731" ><span>6</span></a>
-											<strong>...</strong>
-											<a href="/sport/sportList.xhtml?pageNo=14&servicetype=288731" ><span>15</span></a>
-											<a href="/sport/sportList.xhtml?pageNo=1&servicetype=288731" class='next'><span>下一页</span></a>
+					<a href="/sport/sportList.xhtml?servicetype=288731"  class='on' ><span>1</span></a>
+					<a href="/sport/sportList.xhtml?pageNo=1&servicetype=288731" ><span>2</span></a>
+					<a href="/sport/sportList.xhtml?pageNo=2&servicetype=288731" ><span>3</span></a>
+					<a href="/sport/sportList.xhtml?pageNo=3&servicetype=288731" ><span>4</span></a>
+					<a href="/sport/sportList.xhtml?pageNo=4&servicetype=288731" ><span>5</span></a>
+					<a href="/sport/sportList.xhtml?pageNo=5&servicetype=288731" ><span>6</span></a>
+					<strong>...</strong>
+					<a href="/sport/sportList.xhtml?pageNo=14&servicetype=288731" ><span>15</span></a>
+					<a href="/sport/sportList.xhtml?pageNo=1&servicetype=288731" class='next'><span>下一页</span></a>
 				</div>
 		   </div>
 		</div>

@@ -4,12 +4,22 @@
 * ----------------------------------------------------- */
 
 .mt10{margin-top:10px}
+.hotcmt{margin-top:20px}
+
+.title{
+font-size: 16px;
+}
 
 /*列表样式*/
+ul li {
+list-style: none;
+padding: 0;
+margin: 0;
+}
 .dl-horizontal dd { margin-left: 80px;}
-dt,dd {line-height: 30px;}
+dt,dd {line-height: 25px;}
 
-.ulist{margin-bottom:30px;font:12px/22px}
+.ulist{margin-bottom:20px;font:12px/22px}
 .ulist li{line-height:24px;padding:3px 0 5px 0; list-style:none; margin:0px} 
 .ulist li a{white-space:nowrap}
 
@@ -26,6 +36,26 @@ dt,dd {line-height: 30px;}
 ul.nav-tabs li a{
  font-size: 16px;
  font-weight: bold;
+}
+
+.selectedMenus {
+    background-color: #F4F4F4;
+    height: 28px;
+    line-height: 28px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+	margin-bottom: 20px;
+}
+.nav {
+	margin-bottom: 0;
+}
+.right {
+    float: right;
+}
+.left {
+    float: left;
 }
 
 /*图片样式*/
@@ -50,6 +80,24 @@ ul.nav-tabs li a{
 /*[地图]颜色*/
 .ffst {font-family: '宋体' !important;}
 .cSport{color:#39c!important} 
+
+
+/*右侧热门活动*/
+
+.ui_right h2{
+ font-family: '微软雅黑','宋体';
+ font-size: 16px;
+ font-weight: bold;
+ display: inline;
+}
+
+.hot_activity dt {
+ width: 100px;
+}
+.hot_activity dd {
+ margin-left: 106px;
+}
+
 
 /*分页样式*/
 #page{font-size:12px;height:21px;width:auto;margin:20px auto;float:right}

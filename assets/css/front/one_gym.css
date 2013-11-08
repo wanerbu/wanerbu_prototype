@@ -7,7 +7,7 @@
 .detail_head {position:relative;padding:10px 10px 20px;}
 .clear{position:relative;height:46px}
 .clear{zoom:1}
- .detailName{border-bottom:1px solid #eee;padding-bottom:10px;}
+.detailName{border-bottom:1px solid #eee;padding-bottom:10px;}
  
  h1,h2,h3,h4,h5,h6{display:inline}
  .left {float: left;}
@@ -196,7 +196,7 @@ width: 18px;
 }
 
 .ui_summary span, .ui_summary_big span, .screenList a img.seatPic {
-background: url(../../img/ico_pub.gif) no-repeat;
+background: url("../../img/ico_pub.gif") no-repeat;
 }
 .itemTopic .ui_summary_big {
 color: #333;
@@ -288,6 +288,88 @@ padding-left: 10px;
 	border-bottom-width: 1px;
 	padding-bottom: 9px;
 }
+/*左侧滚动条*/
+.choose_body {
+	position: relative;
+}
+
+.vertical {
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: 10px;
+}
+.scroller {
+    display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    z-index: 0;
+}
+.vertical .decrease {
+    right: 0;
+    top: 0;
+}
+.decrease, .increase {
+    display: none !important;
+}
+.vertical .scroll {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #EEEEEE;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    position: absolute;
+    right: 2px;
+    top: 0;
+    width: 6px;
+    z-index: 98;
+}
+.vertical .handle {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #999999;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    cursor: pointer;
+    display: block;
+    left: -1px;
+    position: relative;
+    width: 8px;
+}
+
+.vertical .handle .handleL {
+    height: 99%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 2px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 2px;
+    width: 8px;
+}
+
+.vertical .handle .handleR {
+    height: 100%;
+    width: 8px;
+}
+
+.vertical .handle .handleC {
+    height: 100%;
+    width: 8px;
+}
+/*左侧滚动条结束*/
+
 
 .opiPrice_body{
 	margin-left: 90px;
@@ -331,3 +413,105 @@ margin-left: 24px;
  margin-left: 106px;
 }
 .mr5 {margin-right: 5px;}
+
+.details_ticket a.select {
+    font-weight: bold;
+}
+.details_ticket a.select, .details_ticket .left a:hover {
+    background-color: #3399CC;
+    color: #FFFFFF;
+}
+.details_ticket a{
+    display: inline-block;
+    margin-right: 5px;
+    padding-bottom: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+	-moz-text-decoration-line: none;
+}
+
+.mapInfo {
+   border-color: #CECECE;
+   border-style: solid;
+   border-width: 1px;
+
+}
+#allmap {
+	width:240px;
+	height:150px;
+	overflow:hidden; 
+	margin:0;
+}
+
+.mapModify {
+    height: 140px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+	border-color: #CECECE;
+    border-style: solid;
+    border-width: 1px;
+}
+.search_icon_tab {
+float: left;
+
+}
+.search_icon_tab a img {
+    background-image: url("../../img/map_ico.png");
+    display: block;
+    height: 16px;
+    width: 16px;
+}
+
+.search_icon_tab a:hover .car, .search_icon_tab a.select .car {
+    background-position: 0 3px;
+}
+
+.search_icon_tab .bus {
+    background-position: 2px -74px;
+}
+.search_icon_tab .men {
+    background-position: 2px -125px;
+}
+
+.search_icon_tab a:hover, .search_icon_tab a.select {
+	background-color: #F4F4F4;
+}
+.search_icon_tab a {
+   border-color: #E7E7E7;
+   border-style: solid;
+   border-width: 1px;
+   float: left;
+   height: 16px;
+   padding-bottom: 6px;
+   padding-left: 28px;
+   padding-right: 28px;
+   padding-top: 6px;
+   width: 16px;
+}
+.search_form {
+    margin-top: 40px;
+    padding-left: 35px;
+}
+
+.search_form ul li {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -2px;
+    position: relative;
+}
+.search_form span.map_ico_a, .search_form span.map_ico_b {
+    background-image: url("../../img/map_ico.png");
+    display: block;
+    height: 21px;
+    left: -30px;
+    position: absolute;
+    top: 5px;
+    width: 21px;
+}
+.search_form span.map_ico_a {
+    background-position: -2px -205px;
+}
+.search_form span.map_ico_b {
+    background-position: -2px -235px;
+}
