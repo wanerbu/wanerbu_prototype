@@ -25,7 +25,6 @@
 	    $(function(){
 	      $("#navbar").load("top_nav.html"); 
 	      $("#footer").load("footer.html"); 
-		  $("#new_activity_modal").load("new_activity_modal.html"); 
 	    });
     </script> 
 </head>
@@ -40,9 +39,7 @@
 		<div class="activity_title">
 			<h1>运动活动</h1>
 			<label><b>971584</b>人参加了活动</label>
-			<!--引用new_activity_modal-->
-	        <div id="new_activity_modal"></div>
-			<a href="#newActivityModal" role="button"  data-toggle="modal">
+			<a href="edit_activity.html" target="_blank">
 			<button type="button" class="btn btn-info more">发起新活动</button>
 			</a>
 		</div>
@@ -82,13 +79,12 @@
 		<div class='span4'>
 			<div class="top_head">
 				<span class="headName">TOP5排行榜</span>
-				<span class="topKey"> 关注度|参与度 </span>
 			</div>
 			<div class="top_body">
 				<ul>
 				   <li>
 					<span class="num winner">1</span>
-					<span class="activity"><a title="1000000电影票狂欢三重奏，11元看电影" target="_blank" href="one_activity.html">1000000电影票狂欢三重</a></span>
+					<span class="activity"><a title="1000000电影票狂欢三重奏，11元看电影" target="_blank" href="one_activity.html">1000000电影票狂欢三重，11元看</a></span>
 					<span class="point">10335参与</span>
 				   </li>
 				   <li>

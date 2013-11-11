@@ -176,7 +176,7 @@ text-align: center;
     text-align: right;
 }
 /*·ÖÒ³ÑùÊ½*/
-#page{font-size:12px;height:21px;width:auto;margin:20px auto;float:right}
+#page{font-size:12px;height:21px;width:auto;margin:20px auto;float:left}
 #page a,#page strong{float:left;margin:0 1px}
 #page a{display:inline-block;height:21px;line-height:21px;padding:0 8px}
 #page a:hover{background:#f60;color:#fff;text-decoration:none}

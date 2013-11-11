@@ -103,7 +103,6 @@ display: none!important;
 /*Topic––*/
 .itemTopic {
 overflow: hidden;
-padding-top: 10px;
 }
 .itemTopic{
 margin-right: 15px;
@@ -118,15 +117,15 @@ zoom: 1;
 float: left;
 }
 .ui_media{
-margin-right: 10px;
 float: left;
 }
 
 .ui_text{
 float: left;
 }
-.ui_map{
-float: left;
+.ui_summary {
+    float: left;
+    width: 600px;
 }
 
 .ui_text a{
@@ -134,10 +133,9 @@ float: left;
 }
 
 .itemTopic .ui_summary_big {
-color: #333;
-font: 12px/22px "ÀŒÃÂ";
+color: #666666;
+font-size: 16px;
 padding-left: 26px;
-margin-top: 10px;
 position: relative;
 }
 
@@ -162,10 +160,6 @@ width: 18px;
 
 .ui_summary span, .ui_summary_big span, .screenList a img.seatPic {
 background: url(../../img/ico_pub.gif) no-repeat;
-}
-.itemTopic .ui_summary_big {
-color: #333;
-font: 12px/22px "ÀŒÃÂ";
 }
 
 .ui_pic {

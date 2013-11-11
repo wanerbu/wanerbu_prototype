@@ -150,15 +150,14 @@ zoom: 1;
 }
 
 .ui_media{
-float: left;
-}
-.ui_media{
 margin-right: 10px;
 float: left;
+ width: 320px;
 }
 
 .ui_text{
 float: left;
+width: 280px;
 }
 .ui_map{
 float: left;
@@ -168,9 +167,9 @@ float: left;
   color: #3399CC; 
 }
 
-.itemTopic .ui_summary_big {
-color: #333;
-font: 12px/22px "宋体";
+.ui_summary_big {
+color: #666666;
+font-size: 16px;
 padding-left: 26px;
 margin-top: 10px;
 position: relative;
@@ -198,10 +197,6 @@ width: 18px;
 .ui_summary span, .ui_summary_big span, .screenList a img.seatPic {
 background: url("../../img/ico_pub.gif") no-repeat;
 }
-.itemTopic .ui_summary_big {
-color: #333;
-font: 12px/22px "宋体";
-}
 
 .itemTopic dl {
 margin-bottom: 10px;
@@ -220,13 +215,17 @@ color: #999;
 }
 
 .ui_map{
-margin-left: 45px;
+margin-left: 5px;
 }
 
 .details{
 margin-top: 20px
 }
-
+.ui_summary{
+float: left;
+width: 600px;
+margin-top: -45px
+}
 /*nav 样式*/
 ul.nav-tabs li a{
  font-size: 16px;

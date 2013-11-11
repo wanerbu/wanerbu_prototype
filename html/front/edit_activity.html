@@ -62,27 +62,59 @@
 							<div class='uitext'>
 								<dl class="activityInfo">
 									<dt>活动名称：</dt>
-									<dd>宝南路88号羽毛球大赛<span even="edit" class="acEdit" title="" placeholder="编辑活动名称"></span></dd>
-									<dt>活动时间：</dt>
-									<dd>
-									   <div class="showForm"">	
-										10月31日 周四 20:00&nbsp;--&nbsp; 
-										<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-										12月30日 周一 19:10 <span even="edit" class="acEdit" title="" plugs-tips="编辑活动时间"></span></p>
-									   </div>	
+									<dd><input type="text" id="inputEmail" placeholder="请输入活动名称..."></dd>
+									<dt>活动类型：</dt>
+									<dd>			
+										<div style="margin-top: -5px; margin-bottom: 5px;">
+											<input type="radio" lang="sport" value="sport" title="项目/场馆" id="no_sport"  name="tag" style=" margin-right: 2px; vertical-align: -8px;">
+											<span style="vertical-align: -5px;">运动</span>
+											<input type="radio" lang="" value="other" title="其他" id="no_other"  name="tag" style=" margin-right: 2px; vertical-align: -8px;">
+											<span style="vertical-align: -5px;">其他</span>
+										</div>
 									</dd>
+									<dt>活动地点：</dt>
+									<dd><input type="text" id="inputEmail" placeholder="请输入活动地址..."></dd>
 									<dt>报名时间：</dt>
 									<dd>
 									   <div class="editForm">	
+										  <div id="datetimepicker3" class="input-append date" style="margin-bottom:15px">
+											<input data-format="dd/MM/yyyy hh:mm:ss" type="text" placeholder="设置报名开始时间..." style="width: 138px;"></input>
+											<span class="add-on">
+											  <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+											  </i>
+											</span>
+										  </div>				  
+										  <div id="datetimepicker4" class="input-append date ml64">
+											<input data-format="dd/MM/yyyy hh:mm:ss" type="text" placeholder="设置报名结束时间..." style="width: 138px;"></input>
+											<span class="add-on">
+											  <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+											  </i>
+											</span>
+										  </div>
+										  <script type="text/javascript">
+										  $(function() {
+											$('#datetimepicker3').datetimepicker({
+											  language: 'pt-BR'
+											});
+											$('#datetimepicker4').datetimepicker({
+											  language: 'pt-BR'
+											});
+										  });
+										  </script>
+									   </div>
+									</dd>
+									<dt>活动时间：</dt>
+									<dd>
+									   <div class="showForm"">	
 										  <div id="datetimepicker1" class="input-append date" style="margin-bottom:15px">
-											<input data-format="dd/MM/yyyy hh:mm:ss" type="text" placeholder="设置开始时间..." style="width: 138px;"></input>
+											<input data-format="dd/MM/yyyy hh:mm:ss" type="text" placeholder="设置活动开始时间..." style="width: 138px;"></input>
 											<span class="add-on">
 											  <i data-time-icon="icon-time" data-date-icon="icon-calendar">
 											  </i>
 											</span>
 										  </div>				  
 										  <div id="datetimepicker2" class="input-append date ml64">
-											<input data-format="dd/MM/yyyy hh:mm:ss" type="text" placeholder="设置结束时间..." style="width: 138px;"></input>
+											<input data-format="dd/MM/yyyy hh:mm:ss" type="text" placeholder="设置活动结束时间..." style="width: 138px;"></input>
 											<span class="add-on">
 											  <i data-time-icon="icon-time" data-date-icon="icon-calendar">
 											  </i>
@@ -98,12 +130,8 @@
 											});
 										  });
 										  </script>
-									   </div>
+									   </div>	
 									</dd>
-									<dt>活动地点：</dt>
-									<dd>宝南路88号(近七宝老街) <span even="edit" class="acEdit" title="" plugs-tips="编辑活动地点"></span></dd>
-									<dt>活动类型：</dt>
-									<dd>运动</dd>
 									<dt>人数限制：</dt>
 									<dd><input type="text" id="inputEmail" style="width: 68px">人<span class="ml10 c999 fs12">留空或为0表示不限人数</span></dd>
 									<dt style=" margin-left: 12px">联系人：</dt>

@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+ul li {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+#allmap {
+	width:618px;
+	height:500px;
+	overflow:hidden; 
+	margin:0;
+}
+.mapInfo {
+   border-color: #CECECE;
+   border-style: solid;
+   border-width: 1px;
+   margin-left: 0px;
+}
+.row-fluid [class*="span"] {
+    margin-left: 0px;
+}
+.search_panel h3{
+    font-size: 14px;
+    font-weight: bold;
+}
+.mapModify {
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+	border-color: #CECECE;
+    border-style: solid;
+    border-width: 1px;
+}
+.search_icon_tab {
+	float: left;
+}
+.search_icon_tab a img {
+    background-image: url("../../img/map_ico.png");
+    display: block;
+    height: 16px;
+    width: 16px;
+}
+
+.search_icon_tab a:hover .car, .search_icon_tab a.select .car {
+    background-position: 0 3px;
+}
+
+.search_icon_tab .bus {
+    background-position: 2px -74px;
+}
+.search_icon_tab .men {
+    background-position: 2px -125px;
+}
+
+.search_icon_tab a:hover, .search_icon_tab a.select {
+	background-color: #F4F4F4;
+}
+.search_icon_tab a {
+   border-color: #E7E7E7;
+   border-style: solid;
+   border-width: 1px;
+   float: left;
+   height: 16px;
+   padding-bottom: 6px;
+   padding-left: 28px;
+   padding-right: 28px;
+   padding-top: 6px;
+   width: 16px;
+}
+.search_form {
+    margin-top: 40px;
+    padding-left: 35px;
+}
+
+.search_form ul li {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -2px;
+    position: relative;
+}
+.search_form span.map_ico_a, .search_form span.map_ico_b {
+    background-image: url("../../img/map_ico.png");
+    display: block;
+    height: 21px;
+    left: -30px;
+    position: absolute;
+    top: 5px;
+    width: 21px;
+}
+.search_form span.map_ico_a {
+    background-position: -2px -205px;
+}
+.search_form span.map_ico_b {
+    background-position: -2px -235px;
+}

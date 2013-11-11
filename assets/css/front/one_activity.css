@@ -43,6 +43,7 @@ ul li{
 .acHeader .acHeaderLine {
     background-image: url("../../img/bg_acHeader.jpg");
 	height: 21px;
+	margin-bottom: 15px;
 }
 
 .uipic,.uitext {
@@ -197,4 +198,8 @@ em {
 }
 .kuang_item p{
 	width:166px;
+}
+.uploadAcPic{
+ background-color:#E9E9C5;;
+ font-size: 18px;
 }

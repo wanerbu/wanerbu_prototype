@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>玩儿不 虹桥临空SOHO羽毛球馆</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="玩儿不">
+    <meta name="author" content="wanerbu">
+
+    <link href="../../plugins/bootstrap/css/bootstrap.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/formtastic.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/wanerbu_formtastic.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/common.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/front/front.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/front/top_nav.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../../assets/css/front/transit_search.css" media="all" rel="stylesheet" type="text/css" />
+
+	<script src="../../plugins/jquery/js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="../../plugins/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=E75ca5bf84895e09c984f7e746c58868"></script>
+
+	<script>
+		// 导入外部文件部分
+	    $(function(){
+	      $("#navbar").load("top_nav.html"); 
+	      $("#footer").load("footer.html"); 
+	    });
+    </script> 
+   
+</head>
+
+  <body>
+  	<!-- 导航部分 -->
+    <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    </div>
+  
+    <div id="main-content" class="container">
+      <div class="row-fluid">
+	  	<div class='mapModify span4'>
+				   <div class="search_panel">
+						<h3>交通驾车查询</h3>
+				   </div>
+				   <div class="search_icon_tab">
+						<a title="驾车" href="javascript:void(0);" class="select"><img src="../../assets/img/blank.gif" class="car"></a>
+						<a title="公共交通" href="javascript:void(0);" class=""><img src="../../assets/img/blank.gif" class="bus"></a>
+						<a title="步行" href="javascript:void(0);" class=""><img src="../../assets/img/blank.gif" class="men"></a>
+					</div>
+					<div class="search_form">
+						<ul>
+							<li>
+								<span title="起点" class="map_ico_a"></span>
+								<input type="text" alt="请输入起点" class="text" style="width:174px;" id="fromAddress">
+							</li>
+							<li>
+								<span title="终点" class="map_ico_b"></span>
+								<input type="text" value="虹桥临空SOHO羽毛球馆" class="text" style="width:174px;" id="endAddress">
+							</li>
+							<li>
+							<button type="button" class="btn btn-info more">查询路线</button>
+							</li>
+						</ul>					
+					</div>
+					<div id="resultPanel" style="display: block;margin-top: 15px;">
+						<div id="r-result"></div>
+					</div>
+			</div><!--mapModify-->
+			<div class='mapInfo span8'>
+				    <div id="allmap"></div>
+					<script type="text/javascript">
+						var map = new BMap.Map("allmap");    // 创建地图实例    
+						map.centerAndZoom("西安",15);
+						var driving = new BMap.DrivingRoute(map, {renderOptions:{map: map, autoViewport: true}});
+
+						map.addControl(new BMap.NavigationControl()); //平移缩放控件
+						map.addControl(new BMap.OverviewMapControl()); //缩略地图控件
+						var opts={offset:new BMap.Size(150,5)}
+						map.addControl(new BMap.ScaleControl(opts)); //比例尺控件
+						map.addControl(new BMap.CopyrightControl()); //版权控件
+						map.addControl(new BMap.MapTypeControl()); //地图类型控件
+						map.setCurrentCity("上海"); // 仅当设置城市信息时，MapTypeControl的切换功能才能可用
+						map.enableScrollWheelZoom(); // 开启鼠标滚轮缩放
+						map.enableKeyboard(); // 开启键盘控制
+						map.enableContinuousZoom(); // 开启连续缩放效果
+						map.enableInertialDragging(); // 开启惯性拖拽效果 
+
+						var start = "西安钟楼";
+						var end = "西安小寨";
+						//三种驾车策略：最少时间，最短距离，避开高速
+						var routePolicy = [BMAP_DRIVING_POLICY_LEAST_TIME,BMAP_DRIVING_POLICY_LEAST_DISTANCE,BMAP_DRIVING_POLICY_AVOID_HIGHWAYS];
+						search(start,end,routePolicy[0]); //最少时间
+						function search(start,end,route){ 
+							var transit = new BMap.DrivingRoute(map, {
+								renderOptions: {map: map,panel:"r-result"}, 
+								policy: route
+							});
+							transit.search(start,end);
+						}
+					</script>
+		  </div><!--mapInfo-->
+	  </div><!--row-fluid-->
+    </div><!--/.container-->
+    <!-- 底部footer -->
+    <footer id="footer">
+    </footer>
+  </body>
+</html>
