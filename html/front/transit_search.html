@@ -45,10 +45,10 @@
 				   <div class="search_panel">
 						<h3>交通驾车查询</h3>
 				   </div>
-				   <div class="search_icon_tab">
-						<a title="驾车" href="javascript:void(0);" class="select"><img src="../../assets/img/blank.gif" class="car"></a>
-						<a title="公共交通" href="javascript:void(0);" class=""><img src="../../assets/img/blank.gif" class="bus"></a>
-						<a title="步行" href="javascript:void(0);" class=""><img src="../../assets/img/blank.gif" class="men"></a>
+				   <div  id="pattern" class="search_icon_tab">
+						<a title="驾车" onclick="tabs(this)" class="select"><img src="../../assets/img/blank.gif" class="car"></a>
+						<a title="公共交通" onclick="tabs(this)" class=""><img src="../../assets/img/blank.gif" class="bus"></a>
+						<a title="步行" onclick="tabs(this)" class=""><img src="../../assets/img/blank.gif" class="men"></a>
 					</div>
 					<div class="search_form">
 						<ul>
@@ -123,8 +123,7 @@ ac.addEventListener("onconfirm", function(e) {    //鼠标点击下拉列表后�
 var _value = e.item.value;
     myValue = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
    // G("searchResultPanel").innerHTML ="onconfirm<br />index = " + e.item.index + "<br />myValue = " + myValue;
-    
-    setPlace();
+   //setPlace();
 });
 
 function setPlace(){
@@ -165,35 +164,84 @@ function setPlace(){
 		// 将地址解析结果显示在地图上，并调整地图视野  
 		myGeo.getPoint(end, function(point){    
 		 if (point) {	   
-		    map.centerAndZoom(point, 15);
+		    map.centerAndZoom(point, 15);//初始化地图,设置中心点坐标和地图级别。
+			var marker=new BMap.Marker(point);//创建标记
+			map.addOverlay(marker); 
+			//marker.enableDragging();//激活标注的拖拽功能
 			var opts = {
 			  width : 200,     // 信息窗口宽度
 			  height: 60,     // 信息窗口高度
-			  title : "雁塔区小寨东路羽毛球馆" , // 信息窗口标题
+			  //title : "雁塔区小寨东路羽毛球馆" , // 信息窗口标题
 			  enableMessage:true,//设置允许信息窗发送短息
 			  message:"亲耐滴，晚上一起打个球吧？戳下面的链接看下地址喔~"
 			}
-			var infoWindow = new BMap.InfoWindow("地址：西安市雁塔区小寨东路", opts);  // 创建信息窗口对象
-			map.openInfoWindow(infoWindow,point); //开启信息窗口 
-			map.addOverlay(new BMap.Marker(point));  		
+			 var info = "雁塔区小寨东路羽毛球馆";
+			 var address= '雁塔区小寨东路1551号(临虹路口)'; 
+			//var infoWindow = new BMap.InfoWindow("地址：西安市雁塔区小寨东路", opts);  // 创建信息窗口对象
+			 var infoWindow=new BMap.InfoWindow("<b><span style='color: #cc3300;font-size: 14px;'>"+info+"</span></b><br/>"+"<span style='color:#666666; font-size:12px;'>"+address+"</span>",opts)
+			 //map.openInfoWindow(infoWindow,point); //开启信息窗口 		
+			  marker.openInfoWindow(infoWindow);
+			  marker.addEventListener("click",function(){
+                    this.openInfoWindow(infoWindow);
+              }); 
 		 }    
 		}, "西安市"); 
-
-		function mDriving() {
-			var startDr = document.getElementById('suggestId').value;
-			var endDr = document.getElementById("endAddress").value;
-			search(startDr,endDr,routePolicy[0]); //最少时间
-		}
 		
 		//三种驾车策略：最少时间，最短距离，避开高速
 		var routePolicy = [BMAP_DRIVING_POLICY_LEAST_TIME,BMAP_DRIVING_POLICY_LEAST_DISTANCE,BMAP_DRIVING_POLICY_AVOID_HIGHWAYS];
 
-	    function search(start,end,route){ 
-			var transit = new BMap.DrivingRoute(map, {
-			renderOptions: {map: map,panel:"r-result2"}, 
-			policy: route
-			});
+		function mDriving() {		
+			map.clearOverlays();    //清除地图上所有覆盖物
+			var startDr = document.getElementById('suggestId').value;
+			var endDr = document.getElementById("endAddress").value;
+			var elements = document.getElementById('pattern');
+			
+			for (var i = 0; i < elements.children.length ; i++ )
+			{
+				if (elements.children[i].getAttribute("class") == "select")
+				{
+					if (elements.children[i].getAttribute("title") == "驾车")
+					{
+						searchforDR(startDr,endDr,routePolicy[0]); //最少时间
+					}
+					if (elements.children[i].getAttribute("title") == "公共交通")
+					{
+						searchforTR(startDr,endDr);
+					}
+					if (elements.children[i].getAttribute("title") == "步行")
+					{
+						searchforWK(startDr,endDr);
+					}
+				}
+			}
+		}
+
+		function searchforWK(start,end){
+			var walking = new BMap.WalkingRoute(map, {renderOptions: {map: map, panel: "r-result2", autoViewport: true}});
+			walking.search(start, end);				
+		}
+
+	    function searchforDR(start,end,route){ 
+			var transit = new BMap.DrivingRoute(map, {renderOptions: {map: map,panel:"r-result2"}, policy: route});
+			transit.search(start,end);	
+		}
+		function searchforTR(start,end){
+		
+			var transit = new BMap.TransitRoute(map, {renderOptions: {map: map, panel: "r-result2"}});
 			transit.search(start,end);	
 		}
 
 </script>
+
+<script type="text/javascript">
+
+function tabs(clicka){
+	var elements = document.getElementById('pattern');
+	for (var i = 0; i < elements.children.length ; i++ )
+	{
+		elements.children[i].removeAttribute("class");
+	}
+	clicka.setAttribute("class","select");
+}
+
+</script> 
